@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/top_gradient_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.loginregister.LoginActivity"
+    >
+
+  <ImageView
+      android:layout_width="@dimen/_200sdp"
+      android:layout_height="@dimen/_200sdp"
+      android:layout_gravity="center"
+      android:background="@drawable/image_round_background"
+      android:contentDescription="@string/app_name"
+      android:padding="@dimen/_10sdp"
+      android:src="@drawable/app_logo"
+      />
+
+</LinearLayout>

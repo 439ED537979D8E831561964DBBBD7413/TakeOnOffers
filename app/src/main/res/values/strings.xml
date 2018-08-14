@@ -1,0 +1,111 @@
+<resources>
+  <string name="app_name">TakeOn Offers</string>
+  <string name="str_skip">Skip</string>
+
+  <string name="error_server">We are facing some problem. Please try again!!! </string>
+  <string name="more_about">Want to show more details? Click here</string>
+
+  <string name="str_about_details"><![CDATA[Takeon group is Gujarat’s integrated franchise solution company since 2017,
+    and an absolute authority on franchising and licensing. Takeon group has helped many of investors in selecting
+    the right franchise and, in turn, assisted numerous organizations in international and domestic franchise expansion.
+    Taking care of brands is Takeon group\'s key ingredients.\n\n
+    Today Takeon group is committed to lead new levels of achievement, sharing a vision to be the
+    multi business company in Gujarat.\n\n
+    Realistically to achieve and value our vision &amp; Corporate Social responsibility through our mission by
+    setting up the short terms and long terms objectives and strategic decisions, we planned to build a
+    parent company where multiple businesses can perform as concept of separate centers.]]></string>
+
+  <string name="location_permission">Location permission is required to get nearly businesses list . Do you want to try again?</string>
+
+  <string name="internet_title">Internet Connection Off</string>
+  <string name="internet_msg">Please start you network connection either mobile data or wifi.
+    Internet is mandatory to use this application.</string>
+  <string name="btn_ok">OK</string>
+
+  <string name="location_title">Location Service disabled</string>
+  <string name="location_msg">Please enable location service. Location is mandatory to use this application.</string>
+  <string name="btn_cancel">Cancel</string>
+  <string name="btn_settings">Settings</string>
+
+  <!-- Login / Register -->
+  <string name="str_retry">Retry</string>
+  <string name="str_login">Login</string>
+  <string name="str_log_out">Log Out</string>
+  <string name="str_sign_up">Sign Up</string>
+  <string name="str_reset_password">Reset Password</string>
+  <string name="str_otp">OTP</string>
+  <string name="str_forgot_password">Forgot Password</string>
+  <string name="str_email_mobile">Email / Mobile</string>
+  <string name="str_password">Password</string>
+  <string name="str_user_name">User Name</string>
+  <string name="str_mobile">Mobile Number</string>
+  <string name="str_email">Email Address</string>
+  <string name="str_birth_date">Birth date</string>
+  <string name="str_gender">Gender</string>
+  <string name="str_city">City</string>
+  <string name="str_already_account">Already account? Login</string>
+  <string name="str_old_password">Old Password</string>
+  <string name="str_new_password">New Password</string>
+  <string name="str_confirm_password">Confirm Password</string>
+  <string name="str_submit">Submit</string>
+  <string name="str_resent">Resend OTP</string>
+
+  <!-- Main -->
+  <string name="text_offer">Offers</string>
+  <string name="text_favorite">Favorites</string>
+  <string name="text_recent">Recent</string>
+  <string name="text_profile">My Account</string>
+  <string name="str_select_city">Select City</string>
+  <string name="str_no_category">No category found!!!</string>
+  <string name="str_no_category_error">We are facing issue while getting category!!!</string>
+
+
+  <!-- Business -->
+  <string name="str_apply">Apply</string>
+  <string name="str_filter">Filter</string>
+  <string name="str_cancel">Cancel</string>
+  <string name="str_search">Search</string>
+  <string name="str_search_here">Search business here..</string>
+
+  <string name="str_no_business">No business found!!!</string>
+  <string name="str_no_business_error">We are facing issue while getting business!!!</string>
+  <string name="str_no_favorite_business">No Favorite business!!!</string>
+  <string name="str_no_favorite_business_error">We are facing issue while getting Favorite business!!!</string>
+  <string name="str_no_recent_business">No Recent business!!!</string>
+  <string name="str_no_recent_business_error">We are facing issue while getting Recent business!!!</string>
+
+  <string name="str_terms_condition"><![CDATA[Terms & Condition]]></string>
+  <string name="str_used_offers">Used offers</string>
+  <string name="str_change_password">Change Password</string>
+  <string name="str_take_on_corner">TakeOn Corner</string>
+  <string name="str_about_us">About Us</string>
+  <string name="str_rate_us">Rate Us</string>
+  <string name="str_customer_care">Customer Care</string>
+  <string name="str_privacy_policy">Privacy Policy</string>
+  <string name="str_disclaimer">Disclaimer</string>
+  <string name="str_cuisines_not_available">Cuisines  not available</string>
+  <string name="str_select_distance">Select Distance</string>
+  <string name="str_business_other_details">Business Other Details</string>
+  <string name="str_business_contact_details">Business Contact Details</string>
+  <string name="str_business_menu_images">Business Menu Images</string>
+  <string name="str_business_map_location">Business Map Location</string>
+
+  <!-- Offers -->
+  <string name="str_pin">Enter PIN</string>
+  <string name="str_redeem_offers">Redeem Offer</string>
+
+  <string name="str_no_business_offers">No business offers found!!!</string>
+  <string name="str_no_business_offers_error">We are facing issue while getting business offers!!!</string>
+  <string name="str_no_redeem_offers">No redeemed offers found!!!</string>
+  <string name="str_no_redeem_offers_error">We are facing issue while getting your redeemed offers!!!</string>
+
+  <string name="str_sunday">S</string>
+  <string name="str_monday">M</string>
+  <string name="str_tuesday">T</string>
+  <string name="str_wednesday">W</string>
+  <string name="str_thursday">Th</string>
+  <string name="str_friday">F</string>
+  <string name="str_saturday">Sa</string>
+  <string name="str_days_on_offer_eligible">Days On Offer Eligible</string>
+
+</resources>

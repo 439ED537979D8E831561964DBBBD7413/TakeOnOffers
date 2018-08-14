@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <!-- Top Layout -->
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:background="@drawable/toolbar_gradient"
+        />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/toolbar_gradient"
+        android:fitsSystemWindows="true"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        >
+
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          >
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ico_arrow_back_svg"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_black"
+            android:gravity="center"
+            android:text="@string/str_search"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_12sdp"
+            />
+      </FrameLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_54sdp"
+        android:layout_below="@+id/main_toolbar"
+        android:layout_margin="@dimen/_3sdp"
+        android:background="@drawable/layout_white_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingTop="@dimen/_8sdp"
+        >
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="@dimen/_40sdp"
+          android:layout_marginTop="@dimen/_2sdp"
+          android:layout_weight="1"
+          android:background="@drawable/edt_shadow_background"
+          android:orientation="vertical"
+          >
+
+        <EditText
+            android:id="@+id/edtBusinessSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:hint="@string/str_search_here"
+            android:imeOptions="actionSearch"
+            android:inputType="textCapWords"
+            android:padding="@dimen/_8sdp"
+            android:textSize="@dimen/_11sdp"
+            />
+
+      </LinearLayout>
+
+      <android.support.v7.widget.AppCompatButton
+          android:id="@+id/btnSearch"
+          android:layout_width="@dimen/_100sdp"
+          android:layout_height="@dimen/_32sdp"
+          android:layout_gravity="center"
+          android:layout_marginLeft="@dimen/_8sdp"
+          android:layout_marginStart="@dimen/_8sdp"
+          android:background="@drawable/btn_shadow_background"
+          android:fontFamily="@font/roboto_black"
+          android:text="@string/str_search"
+          android:textAllCaps="false"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_10sdp"
+          />
+
+    </LinearLayout>
+
+  </RelativeLayout>
+
+  <!-- Main Layout -->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:baselineAligned="false"
+      android:orientation="vertical"
+      android:padding="@dimen/_5sdp"
+      >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewBusinessSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_2sdp"
+        android:scrollbars="none"
+        />
+
+    <include
+        layout="@layout/takeon_layout_error"
+        android:visibility="gone"
+        />
+
+  </LinearLayout>
+
+</LinearLayout>

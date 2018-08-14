@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <!-- Top Layout -->
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/main_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:layout_gravity="center|top"
+      android:background="@drawable/toolbar_gradient"
+      android:fitsSystemWindows="true"
+      android:gravity="center"
+      app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+      >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <ImageView
+          android:id="@+id/imgBack"
+          android:layout_width="@dimen/_32sdp"
+          android:layout_height="match_parent"
+          android:contentDescription="@string/app_name"
+          android:padding="@dimen/_5sdp"
+          android:src="@drawable/ico_arrow_back_svg"
+          />
+
+      <TextView
+          android:id="@+id/toolbar_title"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:fontFamily="@font/roboto_black"
+          android:gravity="center"
+          android:text="@string/str_about_us"
+          android:textColor="@android:color/white"
+          android:textSize="@dimen/_12sdp"
+          />
+    </FrameLayout>
+
+  </android.support.v7.widget.Toolbar>
+
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/btnAboutMore"
+      android:layout_below="@+id/main_toolbar"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
+        tools:ignore="UseCompoundDrawables"
+        >
+
+      <ImageView
+          android:layout_width="@dimen/_150sdp"
+          android:layout_height="@dimen/_150sdp"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/app_logo"
+          />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:fontFamily="@font/roboto_medium"
+          android:padding="@dimen/_5sdp"
+          android:text="@string/str_about_details"
+          android:textColor="@color/oil"
+          android:textSize="@dimen/_11sdp"
+          />
+    </LinearLayout>
+
+  </android.support.v4.widget.NestedScrollView>
+
+  <Button
+      android:id="@+id/btnAboutMore"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_36sdp"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/toolbar_gradient"
+      android:text="@string/more_about"
+      android:textAllCaps="false"
+      android:textColor="@color/colorWhite"
+      android:textSize="@dimen/_11sdp"
+      android:textStyle="bold"
+      style="?android:attr/borderlessButtonStyle"
+      />
+
+</RelativeLayout>
+

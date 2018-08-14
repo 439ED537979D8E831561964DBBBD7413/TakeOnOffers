@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <!-- Top Layout -->
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/main_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:layout_gravity="center|top"
+      android:background="@drawable/toolbar_gradient"
+      android:fitsSystemWindows="true"
+      android:gravity="center"
+      app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+      >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <ImageView
+          android:id="@+id/imgBack"
+          android:layout_width="@dimen/_32sdp"
+          android:layout_height="match_parent"
+          android:contentDescription="@string/app_name"
+          android:padding="@dimen/_5sdp"
+          android:src="@drawable/ico_arrow_back_svg"
+          />
+
+      <TextView
+          android:id="@+id/toolbar_title"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:fontFamily="@font/roboto_black"
+          android:gravity="center"
+          android:text="@string/text_offer"
+          android:textColor="@android:color/white"
+          android:textSize="@dimen/_12sdp"
+          />
+    </FrameLayout>
+
+  </android.support.v7.widget.Toolbar>
+
+  <!-- Main Layout -->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:baselineAligned="false"
+      android:orientation="vertical"
+      >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewBusinessOffers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_2sdp"
+        android:scrollbars="none"
+        />
+
+   <include layout="@layout/takeon_layout_error"
+       android:visibility="gone"/>
+  </LinearLayout>
+
+</LinearLayout>

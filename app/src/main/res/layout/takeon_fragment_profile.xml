@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_125sdp"
+      android:background="@drawable/toolbar_gradient"
+      />
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/main_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:fitsSystemWindows="true"
+      app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+      >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center"
+        android:text="@string/text_profile"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_12sdp"
+        />
+
+  </android.support.v7.widget.Toolbar>
+
+  <RelativeLayout
+      android:id="@+id/layoutProfile"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_52sdp"
+      android:layout_below="@+id/main_toolbar"
+      android:layout_marginEnd="@dimen/_12sdp"
+      android:layout_marginStart="@dimen/_12sdp"
+      android:orientation="horizontal"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:gravity="center|start"
+        android:orientation="vertical"
+        >
+
+      <TextView
+          android:id="@+id/txtProfileName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/roboto_medium"
+          android:gravity="center|start"
+          android:padding="@dimen/_2sdp"
+          android:text="@string/app_name"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/_14sdp"
+          />
+
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+        <TextView
+            android:id="@+id/txtMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_10sdp"
+            />
+      </TableRow>
+
+    </LinearLayout>
+
+    <com.takeon.offers.view.CircleImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="@dimen/_46sdp"
+        android:layout_height="@dimen/_46sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_2sdp"
+        android:src="@drawable/ico_avatar_svg"
+        android:tint="@color/colorWhite"
+        app:civ_border_color="@color/iron"
+        app:civ_border_width="1dp"
+        />
+
+  </RelativeLayout>
+
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/layoutProfile"
+      android:layout_marginBottom="@dimen/_5sdp"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/main_shadow_background"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10sdp"
+        >
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_28sdp"
+          android:fontFamily="@font/roboto_bold"
+          android:gravity="center|start"
+          android:padding="@dimen/_5sdp"
+          android:text="@string/str_take_on_corner"
+          android:textColor="@color/monsoon"
+          android:textSize="@dimen/_10sdp"
+          />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/monsoon"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="@dimen/_12sdp"
+          >
+
+        <TextView
+            android:id="@+id/txtAbout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:drawableEnd="@drawable/ico_next_svg"
+            android:drawableLeft="@drawable/small_app_logo"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableRight="@drawable/ico_next_svg"
+            android:drawableStart="@drawable/small_app_logo"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:text="@string/str_about_us"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/monsoon"
+            />
+
+        <TextView
+            android:id="@+id/txtChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawableEnd="@drawable/ico_next_svg"
+            android:drawableLeft="@drawable/ico_change_password_svg"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableRight="@drawable/ico_next_svg"
+            android:drawableStart="@drawable/ico_change_password_svg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:text="@string/str_change_password"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/monsoon"
+            />
+
+        <TextView
+            android:id="@+id/txtUsedOffer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawableEnd="@drawable/ico_next_svg"
+            android:drawableLeft="@drawable/ico_offer_normal_svg"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableRight="@drawable/ico_next_svg"
+            android:drawableStart="@drawable/ico_offer_normal_svg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:text="@string/str_used_offers"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/monsoon"
+            />
+
+        <TextView
+            android:id="@+id/txtTerms"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawableEnd="@drawable/ico_next_svg"
+            android:drawableLeft="@drawable/ico_writing_svg"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableRight="@drawable/ico_next_svg"
+            android:drawableStart="@drawable/ico_writing_svg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:text="@string/str_terms_condition"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/monsoon"
+            />
+
+        <TextView
+            android:id="@+id/txtRateUs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawableEnd="@drawable/ico_next_svg"
+            android:drawableLeft="@drawable/ico_rate_us_svg"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableRight="@drawable/ico_next_svg"
+            android:drawableStart="@drawable/ico_rate_us_svg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:text="@string/str_rate_us"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/monsoon"
+            />
+
+        <TextView
+            android:id="@+id/txtCustomerCare"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawableEnd="@drawable/ico_next_svg"
+            android:drawableLeft="@drawable/ico_customer_service_svg"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableRight="@drawable/ico_next_svg"
+            android:drawableStart="@drawable/ico_customer_service_svg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:text="@string/str_customer_care"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/monsoon"
+            />
+
+        <TextView
+            android:id="@+id/txtPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawableEnd="@drawable/ico_next_svg"
+            android:drawableLeft="@drawable/ico_writing_svg"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableRight="@drawable/ico_next_svg"
+            android:drawableStart="@drawable/ico_writing_svg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:text="@string/str_privacy_policy"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/monsoon"
+            />
+
+        <TextView
+            android:id="@+id/txtDisclaimer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawableEnd="@drawable/ico_next_svg"
+            android:drawableLeft="@drawable/ico_writing_svg"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableRight="@drawable/ico_next_svg"
+            android:drawableStart="@drawable/ico_writing_svg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:text="@string/str_disclaimer"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/monsoon"
+            />
+
+        <TextView
+            android:id="@+id/txtLogOut"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawableEnd="@drawable/ico_next_svg"
+            android:drawableLeft="@drawable/ico_log_out_svg"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableRight="@drawable/ico_next_svg"
+            android:drawableStart="@drawable/ico_log_out_svg"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:text="@string/str_log_out"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/monsoon"
+            />
+      </LinearLayout>
+
+    </LinearLayout>
+  </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

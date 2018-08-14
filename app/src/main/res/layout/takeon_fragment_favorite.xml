@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/main_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@drawable/toolbar_gradient"
+      android:fitsSystemWindows="true"
+      app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+      >
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center"
+        android:text="@string/text_favorite"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_12sdp"
+        />
+
+  </android.support.v7.widget.Toolbar>
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:baselineAligned="false"
+      android:gravity="center"
+      android:orientation="vertical"
+      >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewFavoriteList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp"
+        />
+
+    <include
+        layout="@layout/takeon_layout_error"
+        android:visibility="gone"
+        />
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtMessage"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:drawablePadding="@dimen/_10sdp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/app_name"-->
+    <!--android:textColor="@color/colorPrimary"-->
+    <!--android:textSize="@dimen/_12sdp"-->
+    <!--/>-->
+
+  </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <!-- Top Layout -->
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/main_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:layout_gravity="center|top"
+      android:background="@drawable/toolbar_gradient"
+      android:fitsSystemWindows="true"
+      android:gravity="center"
+      app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+      >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <ImageView
+          android:id="@+id/imgBack"
+          android:layout_width="@dimen/_32sdp"
+          android:layout_height="match_parent"
+          android:contentDescription="@string/app_name"
+          android:padding="@dimen/_5sdp"
+          android:src="@drawable/ico_arrow_back_svg"
+          />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:fontFamily="@font/roboto_black"
+          android:gravity="center"
+          android:text="@string/str_redeem_offers"
+          android:textColor="@android:color/white"
+          android:textSize="@dimen/_12sdp"
+          />
+    </FrameLayout>
+
+  </android.support.v7.widget.Toolbar>
+
+  <!-- Main Layout -->
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_margin="@dimen/_2sdp"
+      android:layout_weight="1"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center|start|top"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/main_shadow_background"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_8sdp"
+        android:paddingLeft="@dimen/_8sdp"
+        android:paddingRight="@dimen/_8sdp"
+        >
+
+      <TextView
+          android:id="@+id/txtOfferName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_3sdp"
+          android:fontFamily="@font/roboto_medium"
+          android:gravity="center|start"
+          android:padding="@dimen/_5sdp"
+          android:text=""
+          android:textColor="@color/colorBlack"
+          android:textSize="@dimen/_13sdp"
+          />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="start"
+          android:orientation="vertical"
+          android:padding="@dimen/_2sdp"
+          >
+
+        <TextView
+            android:id="@+id/txtOfferAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/oil"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <TextView
+            android:id="@+id/txtOfferDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|start"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/oil"
+            android:textSize="@dimen/_10sdp"
+            />
+
+        <LinearLayout
+            android:id="@+id/daysView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical"
+            >
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/monsoon"
+              />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/roboto_medium"
+              android:padding="@dimen/_5sdp"
+              android:text="@string/str_days_on_offer_eligible"
+              android:textColor="@color/oil"
+              android:textSize="@dimen/_10sdp"
+              />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="horizontal"
+              >
+
+            <TextView
+                android:id="@+id/txtSunday"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/ico_filled_circle"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/str_sunday"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/txtMonday"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/ico_filled_circle"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/str_monday"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/txtTuesday"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/ico_filled_circle"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/str_tuesday"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/txtWednesday"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/ico_filled_circle"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/str_wednesday"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/txtThursday"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/ico_filled_circle"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/str_thursday"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/txtFriday"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/ico_filled_circle"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/str_friday"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/txtSaturday"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/ico_filled_circle"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="@string/str_saturday"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                />
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </android.support.v4.widget.NestedScrollView>
+
+  <Button
+      android:id="@+id/btnRedeem"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_36sdp"
+      android:background="@color/material_red"
+      android:text="@string/str_redeem_offers"
+      android:textAllCaps="false"
+      android:textColor="@color/colorWhite"
+      android:textSize="@dimen/_11sdp"
+      android:textStyle="bold"
+      style="?android:attr/borderlessButtonStyle"
+      />
+
+</LinearLayout>

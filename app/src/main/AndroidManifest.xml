@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.takeon.offers">
+
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+
+  <uses-feature android:name="android.hardware.camera"/>
+
+  <application
+      android:name=".ui.MyApplication"
+      android:allowBackup="true"
+      android:icon="@drawable/app_logo"
+      android:label="@string/app_name"
+      android:roundIcon="@drawable/app_logo"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+
+    <!-- Login / Register -->
+    <activity
+        android:name=".ui.intro.SplashActivity"
+        android:screenOrientation="portrait">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+      </intent-filter>
+    </activity>
+
+    <activity
+        android:name=".ui.intro.SliderActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.loginregister.LoginActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.BaseActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.loginregister.RegisterActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.loginregister.OTPActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.loginregister.ForgotPasswordActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.loginregister.ResetPasswordActivity"
+        android:screenOrientation="portrait"/>
+
+    <!-- Dash Board -->
+    <activity
+        android:name=".ui.MainActivity"
+        android:screenOrientation="portrait"/>
+
+    <!-- Business -->
+    <activity
+        android:name=".ui.business.BusinessActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.business.BusinessDetailsActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.business.BusinessOffersActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.business.BusinessOffersRedeemActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.business.FullScreenViewActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.business.BusinessSearchActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.business.QrCodeScannerActivity"
+        android:screenOrientation="portrait"/>
+
+    <!-- Profile -->
+    <activity
+        android:name=".ui.ChangePasswordActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name=".ui.AboutUsActivity"
+        android:screenOrientation="portrait"/>
+
+    <!-- Firebase Notifications -->
+
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/app_logo_blank"/>
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/colorPrimary"/>
+
+    <service
+        android:name=".service.MyFirebaseMessagingService"
+        android:exported="false">
+      <intent-filter>
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+    <!-- ./Firebase Notifications -->
+
+  </application>
+
+</manifest>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@drawable/main_shadow_background"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_12sdp"
+    android:paddingLeft="@dimen/_10sdp"
+    android:paddingRight="@dimen/_10sdp"
+    >
+
+  <TextView
+      android:id="@+id/txtBusinessName"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:ellipsize="end"
+      android:fontFamily="@font/roboto_medium"
+      android:gravity="center|start"
+      android:lines="1"
+      android:padding="@dimen/_8sdp"
+      android:text=""
+      android:textColor="@color/colorBlack"
+      android:textSize="@dimen/_11sdp"
+      />
+
+</LinearLayout>
+

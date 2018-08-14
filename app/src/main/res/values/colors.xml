@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="colorPrimary">#00c5ff</color>
+  <color name="colorPrimaryDark">#0075ff</color>
+  <color name="colorAccent">#0075ff</color>
+
+  <color name="colorStart">#00c5ff</color>
+  <color name="colorEnd">#0075ff</color>
+
+  <color name="colorAlphaStart">#A700c5ff</color>
+  <color name="colorAlphaEnd">#A70075ff</color>
+
+  <color name="colorGradientStart">#0075ff</color>
+  <color name="colorGradientCenter">#00c5ff</color>
+  <color name="colorGradientEnd">#00c5ff</color>
+
+  <color name="colorWhite">#FFFFFF</color>
+  <color name="colorBlack">#000000</color>
+
+  <color name="transparent">#00000000</color>
+  <!-- card colors -->
+  <color name="card_background">#ffffff</color>
+  <color name="card_shadow_1">#d4d4d4</color>
+  <color name="card_shadow_2">#dddddd</color>
+
+  <!-- Other Color-->
+  <color name="oil">#333333</color>
+  <color name="monsoon">#777777</color>
+  <color name="jumbo">#888888</color>
+  <color name="base">#AAAAAA</color>
+  <color name="iron">#CCCCCC</color>
+
+  <color name="kprogresshud_default_color">#B1000000</color>
+  <color name="kprogresshud_grey_color">#449E9E9E</color>
+
+  <color name="material_red">#F44336</color>
+
+</resources>
