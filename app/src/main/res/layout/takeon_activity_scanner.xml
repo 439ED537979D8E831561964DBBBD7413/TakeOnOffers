@@ -20,7 +20,7 @@
         android:layout_height="@dimen/_36sdp"
         android:layout_margin="@dimen/_5sdp"
         android:layout_weight="1"
-        android:background="@drawable/edt_shadow_background"
+        android:background="@drawable/edt_background"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:hint="@string/str_pin"

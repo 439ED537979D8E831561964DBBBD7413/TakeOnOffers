@@ -6,8 +6,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.android.volley.VolleyError
+import com.google.gson.GsonBuilder
 import com.takeon.offers.R
-import com.takeon.offers.model.OffersModel
+import com.takeon.offers.model.BusinessOffers
+import com.takeon.offers.model.BusinessResponse
+import com.takeon.offers.model.CommonApiResponse
 import com.takeon.offers.ui.BaseActivity
 import com.takeon.offers.ui.MainActivity
 import com.takeon.offers.utils.CommonDataUtility
@@ -84,11 +87,12 @@ class BusinessOffersRedeemActivity : BaseActivity(),
 
           hideProgressBar()
 
-          val jsonObject = JSONObject(response)
+          val commonApiResponse = GsonBuilder().create()
+              .fromJson(response, CommonApiResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
+          if (commonApiResponse.status.equals("true", ignoreCase = true)) {
 
-            Toast.makeText(activity, jsonObject.optString("message"), Toast.LENGTH_SHORT)
+            Toast.makeText(activity, commonApiResponse.message, Toast.LENGTH_SHORT)
                 .show()
 
             val intent = Intent(this, MainActivity::class.java)
@@ -99,7 +103,7 @@ class BusinessOffersRedeemActivity : BaseActivity(),
             finish() // call this to finish the current activity
 
           } else {
-            CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+            CommonDataUtility.showSnackBar(llRoot, commonApiResponse.message)
           }
 
         }
@@ -109,7 +113,7 @@ class BusinessOffersRedeemActivity : BaseActivity(),
     } catch (e: Exception) {
       e.printStackTrace()
       hideProgressBar()
-      CommonDataUtility.showSnackBar(llRoot,getString(R.string.error_server))
+      CommonDataUtility.showSnackBar(llRoot, getString(R.string.error_server))
     }
   }
 
@@ -134,38 +138,38 @@ class BusinessOffersRedeemActivity : BaseActivity(),
     val bundle = intent.extras
 
     businessId = bundle.getString("business_id")
-    val position = bundle.getInt("position", 0)
-    val productImages = bundle.getSerializable("images") as ArrayList<OffersModel>
 
-    bind(productImages[position])
+    bind(bundle.getSerializable("images") as BusinessOffers)
   }
 
   private fun bind(
-    offersModel: OffersModel
+    offersModel: BusinessOffers
   ) {
 
-    offerId = offersModel.offerId
+    offerId = offersModel.id!!
 
-    txtOfferName!!.text = offersModel.offerName
+    txtOfferName!!.text = offersModel.title
     txtOfferAmount!!.text =
-        String.format("Offer Amount : %s Rs.", offersModel.offerAmount)
+        String.format("Offer Amount : %s Rs.", offersModel.amount)
 
-    if (offersModel.offerDescription == "") {
+    if (offersModel.description == "") {
       txtOfferDescription.visibility = View.GONE
     } else {
       txtOfferDescription.visibility = View.VISIBLE
       txtOfferDescription.text =
-          String.format("Offer Description : %s ", offersModel.offerDescription)
+          String.format("Offer Description : %s ", offersModel.description)
     }
 
-    if (offersModel.offerDays.size == 0) {
+    val daysList = getDays(offersModel.eligible_days!!)
+
+    if (daysList.size == 0) {
       daysView!!.visibility = View.GONE
     } else {
       daysView!!.visibility = View.VISIBLE
 
-      for (i in 0 until offersModel.offerDays.size) {
+      for (i in 0 until daysList.size) {
 
-        val day = offersModel.offerDays[i]
+        val day = daysList[i]
 
         when (day) {
           "1" -> {
@@ -192,6 +196,22 @@ class BusinessOffersRedeemActivity : BaseActivity(),
         }
       }
     }
+  }
+
+  private fun getDays(eligible_days: String): ArrayList<String> {
+
+    val days = ArrayList<String>()
+
+    val temp = eligible_days.split(",")
+
+    for (aTemp in temp) {
+      days.add(
+          aTemp.replace("[", "").replace("]", "")
+              .replace("\"", "").trim { it <= ' ' }
+      )
+    }
+
+    return days
   }
 
   override fun onActivityResult(

@@ -12,12 +12,14 @@ import android.view.View
 import android.view.View.OnClickListener
 import android.view.ViewGroup
 import com.android.volley.VolleyError
+import com.google.gson.GsonBuilder
 import com.takeon.offers.R
 import com.takeon.offers.R.layout
 import com.takeon.offers.adapter.CategoryListAdapter
 import com.takeon.offers.adapter.MyViewPagerAdapter
 import com.takeon.offers.kprogresshud.KProgressHUD
-import com.takeon.offers.model.CategoryModel
+import com.takeon.offers.model.CategoryResponse
+import com.takeon.offers.model.CategoryResponse.CategoryModel
 import com.takeon.offers.ui.MyApplication
 import com.takeon.offers.ui.business.BusinessActivity
 import com.takeon.offers.ui.business.BusinessSearchActivity
@@ -25,6 +27,7 @@ import com.takeon.offers.utils.CommonDataUtility
 import com.takeon.offers.utils.StaticDataUtility
 import com.takeon.offers.utils.VolleyNetWorkCall
 import kotlinx.android.synthetic.main.takeon_fragment_home.imgNext
+import kotlinx.android.synthetic.main.takeon_fragment_home.imgNotification
 import kotlinx.android.synthetic.main.takeon_fragment_home.imgPrevious
 import kotlinx.android.synthetic.main.takeon_fragment_home.imgSearch
 import kotlinx.android.synthetic.main.takeon_fragment_home.indicator
@@ -47,7 +50,7 @@ class HomeFragment : BaseFragment(),
   private var categoryArrayList: ArrayList<CategoryModel>? = null
   private var viewPagerPosition = 0
   private var categoryPosition = 0
-  private val imageList = ArrayList<String>()
+  private var imageList: ArrayList<String>? = null
 
   override fun onCreateView(
     inflater: LayoutInflater,
@@ -71,6 +74,9 @@ class HomeFragment : BaseFragment(),
       R.id.imgSearch -> {
         startActivity(Intent(activity, BusinessSearchActivity::class.java))
       }
+      R.id.imgNotification -> {
+        CommonDataUtility.showSnackBar(llRoot, "You don't have any notification!!!")
+      }
     }
   }
 
@@ -87,20 +93,13 @@ class HomeFragment : BaseFragment(),
 
         StaticDataUtility.API_CATEGORIES -> {
 
-          if (response.optString("status").equals("true", ignoreCase = true)) {
+          val categoryResponseModel = GsonBuilder().create()
+              .fromJson(response.toString(), CategoryResponse::class.java)
 
-            val jsonArray = response.getJSONArray("categories")
+          if (categoryResponseModel.status.equals("true", ignoreCase = true)) {
 
-            for (i in 0 until jsonArray.length()) {
-
-              val jsonObject = jsonArray.getJSONObject(i)
-
-              val categoryModel = CategoryModel()
-              categoryModel.categoryId = jsonObject.optString("id")
-              categoryModel.categoryName = jsonObject.optString("category")
-              categoryModel.categoryImage = jsonObject.optString("image")
-
-              categoryArrayList!!.add(categoryModel)
+            for (category in categoryResponseModel.categories!!) {
+              categoryArrayList!!.add(category)
             }
 
             if (categoryArrayList!!.size > 0) {
@@ -122,7 +121,7 @@ class HomeFragment : BaseFragment(),
             val jsonArray = response.getJSONArray("slider")
 
             for (i in 0 until jsonArray.length()) {
-              imageList.addAll(
+              imageList!!.addAll(
                   setOf(
                       StaticDataUtility.CATEGORY_PHOTO_URL + jsonArray.getJSONObject(i)
                           .optString("image")
@@ -238,6 +237,7 @@ class HomeFragment : BaseFragment(),
     }
 
     imgSearch.setOnClickListener(this)
+    imgNotification.setOnClickListener(this)
 
     recyclerViewCategory!!.layoutManager = GridLayoutManager(activity, 3)
     recyclerViewCategory!!.isNestedScrollingEnabled = false
@@ -258,7 +258,7 @@ class HomeFragment : BaseFragment(),
 //        "https://images.designtrends.com/wp-content/uploads/2016/03/29071910/Very-nice-Fireworks-iPhone-6-Wallpaper.jpg"
 //    )
 
-    val adapter = MyViewPagerAdapter(activity, imageList)
+    val adapter = MyViewPagerAdapter(activity, imageList!!)
     view_pager!!.adapter = adapter
     indicator!!.setViewPager(view_pager)
 
@@ -305,6 +305,7 @@ class HomeFragment : BaseFragment(),
 
   private fun getSlider() {
 
+    imageList = ArrayList()
     showProgressBar()
 
     netWorkCall.makeServiceCall(activity, StaticDataUtility.API_CATEGORY_SLIDER, this)
@@ -323,8 +324,8 @@ class HomeFragment : BaseFragment(),
   private fun openActivity() {
 
     val intent = Intent(activity, BusinessActivity::class.java)
-    intent.putExtra("category_id", categoryArrayList!![categoryPosition].categoryId)
-    intent.putExtra("category_name", categoryArrayList!![categoryPosition].categoryName)
+    intent.putExtra("category_id", categoryArrayList!![categoryPosition].id)
+    intent.putExtra("category_name", categoryArrayList!![categoryPosition].category)
     startActivity(intent)
   }
 }

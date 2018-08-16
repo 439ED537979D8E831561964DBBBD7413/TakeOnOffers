@@ -7,13 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.takeon.offers.R
-import com.takeon.offers.model.ImageModel
+import com.takeon.offers.model.SingleBusinessResponse.BusinessImages
+import com.takeon.offers.utils.StaticDataUtility
 import kotlinx.android.synthetic.main.takeon_images_list_item.view.imgMenuImage
 import java.util.ArrayList
 
 class MenuImagesListAdapter(
   private val activity: Activity,
-  private val imagesList: ArrayList<ImageModel>,
+  private val imagesList: ArrayList<BusinessImages>,
   private val clickListener: MenuImageClickListener?
 ) : RecyclerView.Adapter<MenuImagesListAdapter.ImageViewHolder>() {
 
@@ -38,10 +39,11 @@ class MenuImagesListAdapter(
   }
 
   inner class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    fun bind(imageModel: ImageModel) {
+
+    fun bind(imageModel: BusinessImages) {
 
       Glide.with(activity)
-          .load(imageModel.pathName)
+          .load(StaticDataUtility.BUSINESS_PHOTO_URL + imageModel.photo)
           .into(itemView.imgMenuImage!!)
 
       itemView.setOnClickListener {

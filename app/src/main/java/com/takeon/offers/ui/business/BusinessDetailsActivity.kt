@@ -8,11 +8,13 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.android.volley.VolleyError
 import com.bumptech.glide.Glide
+import com.google.gson.GsonBuilder
 import com.takeon.offers.R
 import com.takeon.offers.adapter.MenuImagesListAdapter
 import com.takeon.offers.adapter.MenuImagesListAdapter.MenuImageClickListener
 import com.takeon.offers.adapter.MyViewPagerAdapter
-import com.takeon.offers.model.ImageModel
+import com.takeon.offers.model.SingleBusinessResponse
+import com.takeon.offers.model.SingleBusinessResponse.BusinessImages
 import com.takeon.offers.ui.BaseActivity
 import com.takeon.offers.utils.CommonDataUtility
 import com.takeon.offers.utils.StaticDataUtility
@@ -37,6 +39,7 @@ import kotlinx.android.synthetic.main.takeon_activity_business_details.txtBusine
 import kotlinx.android.synthetic.main.takeon_activity_business_details.txtBusinessType
 import kotlinx.android.synthetic.main.takeon_activity_business_details.txtContactPerson
 import kotlinx.android.synthetic.main.takeon_activity_business_details.txtCuisines
+import kotlinx.android.synthetic.main.takeon_activity_business_details.txtOffers
 import kotlinx.android.synthetic.main.takeon_activity_business_details.txtShopNumber
 import kotlinx.android.synthetic.main.takeon_activity_business_details.txtShopTime
 import kotlinx.android.synthetic.main.takeon_activity_business_details.txtTotalRedeem
@@ -52,10 +55,11 @@ class BusinessDetailsActivity : BaseActivity(),
 
   private var activity: Activity? = null
   private var imageList: ArrayList<String>? = null
-  private var menuImages: ArrayList<ImageModel>? = null
-  private var currentLatitude = 21.2348507
-  private var currentLongitude = 72.8196971
+  private var menuImages: ArrayList<BusinessImages>? = null
+  private var currentLatitude = 0.0
+  private var currentLongitude = 0.0
   private var businessId = ""
+  private var totalOffers = ""
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -95,94 +99,109 @@ class BusinessDetailsActivity : BaseActivity(),
       // <editor-fold API_GET_BUSINESSES>
         StaticDataUtility.API_BUSINESSES -> {
 
-          val jsonObject = JSONObject(response)
+          val businessResponseModel = GsonBuilder().create()
+              .fromJson(response, SingleBusinessResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
+          if (businessResponseModel.status.equals("true", ignoreCase = true)) {
 
             // <editor-fold Set business details>
-            val businessDetails = jsonObject.optJSONObject("business")
+            val businessDetails = businessResponseModel.business
 
             if (businessDetails != null) {
-              toolbar_title.text = businessDetails.optString("business_name")
-              txtBusinessName.text = businessDetails.optString("business_name")
-              txtBusinessAddress.text = businessDetails.optString("address")
+              toolbar_title.text = businessDetails.business_name
+              txtBusinessName.text = businessDetails.business_name
+              txtBusinessAddress.text = businessDetails.address
 
               txtBusinessArea.text = StringBuilder().append("Area : ")
-                  .append(businessDetails.optString("area"))
+                  .append(businessDetails.area)
                   .append(", ")
-                  .append(businessDetails.optString("city"))
+                  .append(businessDetails.city)
                   .append(", ")
-                  .append(businessDetails.optString("state"))
+                  .append(businessDetails.state)
 
               txtBusinessType.text = StringBuilder().append("Business Type : ")
-                  .append(businessDetails.optString("category"))
+                  .append(businessDetails.category)
               txtCuisines.text = StringBuilder().append("Cosiness : ")
-                  .append(businessDetails.optString("cosiness"))
+                  .append(businessDetails.cuisines)
               txtTotalSave.text = StringBuilder().append("Total Saving : ")
-                  .append(businessDetails.optString("total_saving_amount"))
+                  .append(businessDetails.total_saving_amount)
                   .append(" Rs.")
               txtTotalRedeem.text = StringBuilder().append("Total Redeem : ")
-                  .append(businessDetails.optString("total_reedem"))
+                  .append(businessDetails.total_reedem)
                   .append(" times")
 
               txtShopTime.text = StringBuilder().append("Shop Time : ")
-                  .append(businessDetails.optString("from_time"))
+                  .append(businessDetails.from_time)
                   .append(" - ")
-                  .append(businessDetails.optString("to_time"))
+                  .append(businessDetails.to_time)
 
               txtContactPerson.text = StringBuilder().append("Contact Person : ")
-                  .append(
-                      businessDetails.optString("authorised_person")
-                  )
+                  .append(businessDetails.authorised_person)
                   .append(" (")
-                  .append(businessDetails.optString("designation"))
+                  .append(businessDetails.designation)
                   .append(")")
                   .toString()
               txtBusinessNumber.text = StringBuilder().append("Business Number : ")
-                  .append(businessDetails.optString("business_number"))
+                  .append(businessDetails.business_number)
               txtShopNumber.text = StringBuilder().append("Shop Number : ")
-                  .append(businessDetails.optString("shop_number"))
+                  .append(businessDetails.shop_number)
 
-              if (businessDetails.optString("business_email") == "") {
+              if (businessDetails.business_email == "") {
                 txtBusinessEmail.visibility = View.GONE
               } else {
                 txtBusinessEmail.text = StringBuilder().append("Business Email : ")
-                    .append(businessDetails.optString("business_email"))
+                    .append(businessDetails.business_email)
               }
 
+              currentLatitude = java.lang.Double.parseDouble(businessDetails.latitude)
+              currentLongitude =
+                  java.lang.Double.parseDouble(businessDetails.longitude)
+
               setMapAndLocation(
-                  StringBuilder().append(businessDetails.optString("area"))
+                  StringBuilder().append("Area : ")
+                      .append(businessDetails.area)
                       .append(", ")
-                      .append(businessDetails.optString("city"))
+                      .append(businessDetails.city)
                       .append(", ")
-                      .append(businessDetails.optString("state")).toString()
+                      .append(businessDetails.state).toString()
               )
             }
             // </editor-fold>
 
             // <editor-fold Set business logo>
-            val logoArray = jsonObject.getJSONArray("logo")
 
-            if (logoArray.length() > 0) {
+            totalOffers = if (businessResponseModel.business_offers!!.size > 0) {
+              businessResponseModel.business_offers!!.size.toString()
+            } else {
+              "0"
+            }
+
+            txtOffers.text = StringBuilder().append(totalOffers)
+                .append(" offers available")
+                .toString()
+
+            // </editor-fold>
+
+            // <editor-fold Set business logo>
+            val logoArray = businessResponseModel.logo!!
+
+            if (logoArray.size > 0) {
 
               Glide.with(this)
                   .load(
-                      StaticDataUtility.BUSINESS_PHOTO_URL + logoArray.getJSONObject(0).optString(
-                          "photo"
-                      )
+                      StaticDataUtility.BUSINESS_PHOTO_URL + logoArray[0].photo
                   )
                   .into(imgBusinessLogo)
             }
             // </editor-fold>
 
             // <editor-fold Set business slider images>
-            val shopImagesArray = jsonObject.getJSONArray("shop_images")
+            val shopImagesArray = businessResponseModel.shop_images!!
 
-            for (i in 0 until shopImagesArray.length()) {
+            for (i in 0 until shopImagesArray.size) {
               imageList?.addAll(
                   setOf(
-                      StaticDataUtility.BUSINESS_PHOTO_URL + shopImagesArray.getJSONObject(i)
-                          .optString("photo")
+                      StaticDataUtility.BUSINESS_PHOTO_URL + shopImagesArray[i].photo
                   )
               )
             }
@@ -191,22 +210,14 @@ class BusinessDetailsActivity : BaseActivity(),
             // </editor-fold>
 
             // <editor-fold Set business menu images>
-            val shopMenuArray = jsonObject.getJSONArray("shop_menu")
+            val shopMenuArray = businessResponseModel.shop_menu!!
 
-            if (shopMenuArray.length() > 0) {
+            if (shopMenuArray.size > 0) {
 
               cardBusinessMenu.visibility = View.VISIBLE
 
-              for (i in 0 until shopMenuArray.length()) {
-
-                val shopMenuObject = shopMenuArray.getJSONObject(i)
-
-                val imageModel = ImageModel()
-                imageModel.imageId = shopMenuObject.optString("id")
-                imageModel.pathName = StaticDataUtility.BUSINESS_PHOTO_URL +
-                    shopMenuObject.optString("photo")
-
-                menuImages?.add(imageModel)
+              for (images in shopMenuArray) {
+                menuImages?.add(images)
               }
 
               val imagesListAdapter = MenuImagesListAdapter(activity!!, menuImages!!, this)
@@ -285,8 +296,6 @@ class BusinessDetailsActivity : BaseActivity(),
 
   private fun initUI() {
 
-//    updateLocation()
-
     businessId = intent.getStringExtra("business_id")
 
     recyclerViewBusinessMenu.layoutManager =
@@ -295,11 +304,14 @@ class BusinessDetailsActivity : BaseActivity(),
 
     cardBusinessOffer.setOnClickListener {
 
-      val intent = Intent(activity!!, BusinessOffersActivity::class.java)
-      intent.putExtra("business_id", businessId)
-      intent.putExtra("isFrom", "business")
-      startActivity(intent)
-
+      if (totalOffers != "0") {
+        val intent = Intent(activity!!, BusinessOffersActivity::class.java)
+        intent.putExtra("business_id", businessId)
+        intent.putExtra("isFrom", "business")
+        startActivity(intent)
+      } else {
+        CommonDataUtility.showSnackBar(llRoot, "No business offers available!!!")
+      }
     }
 
     cardBusinessLocation.setOnClickListener {

@@ -1,0 +1,33 @@
+package com.takeon.offers.model
+
+class SingleBusinessData {
+
+  var id: String? = ""
+  var name: String? = ""
+  var business_name: String? = ""
+  var address: String? = ""
+  var area: String? = ""
+  var city: String? = ""
+  var state: String? = ""
+  var zip: String? = ""
+  var business_number: String? = ""
+  var shop_number: String? = ""
+  var authorised_person: String? = ""
+  var designation: String? = ""
+  var from_time: String? = ""
+  var to_time: String? = ""
+  var business_email: String? = ""
+  var category_id: String? = ""
+  var category: String? = ""
+  var sub_category_id: String? = ""
+  var sub_categories: String? = ""
+  var total_saving_amount: String? = ""
+  var total_reedem: String? = ""
+  var photo: String? = ""
+  var distance: String? = ""
+  var is_faviorite: String? = ""
+  var total_offers: String? = ""
+  var cuisines: String? = ""
+  var latitude: String? = ""
+  var longitude: String? = ""
+}

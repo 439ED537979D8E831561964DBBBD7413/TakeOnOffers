@@ -43,6 +43,7 @@
   <string name="str_birth_date">Birth date</string>
   <string name="str_gender">Gender</string>
   <string name="str_city">City</string>
+  <string name="str_select_area">Select Area</string>
   <string name="str_already_account">Already account? Login</string>
   <string name="str_old_password">Old Password</string>
   <string name="str_new_password">New Password</string>
@@ -83,6 +84,8 @@
   <string name="str_customer_care">Customer Care</string>
   <string name="str_privacy_policy">Privacy Policy</string>
   <string name="str_disclaimer">Disclaimer</string>
+  <string name="str_contact_us">Contact US At</string>
+  <string name="str_disclaimer_content">The information contained on this site is for general information only. We have taken utmost care in collecting information but we still make no warranties of any kind of information, accuracy, graphics, pictures and more, of any kind.</string>
   <string name="str_cuisines_not_available">Cuisines  not available</string>
   <string name="str_select_distance">Select Distance</string>
   <string name="str_business_other_details">Business Other Details</string>

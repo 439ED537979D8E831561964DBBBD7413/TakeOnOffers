@@ -3,12 +3,15 @@ package com.takeon.offers.ui.business
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import com.android.volley.VolleyError
+import com.google.gson.GsonBuilder
 import com.takeon.offers.R
 import com.takeon.offers.adapter.BusinessSearchListAdapter
-import com.takeon.offers.model.BusinessModel
+import com.takeon.offers.model.BusinessResponse
+import com.takeon.offers.model.SingleBusinessData
 import com.takeon.offers.ui.BaseActivity
 import com.takeon.offers.utils.CommonDataUtility
 import com.takeon.offers.utils.StaticDataUtility
@@ -31,7 +34,7 @@ class BusinessSearchActivity : BaseActivity(),
     View.OnClickListener, VolleyNetWorkCall.OnResponse {
 
   private var activity: Activity? = null
-  private var businessArrayList: ArrayList<BusinessModel>? = null
+  private var businessArrayList: ArrayList<SingleBusinessData>? = null
   private var listAdapter: BusinessSearchListAdapter? = null
   private var businessName = ""
 
@@ -80,21 +83,13 @@ class BusinessSearchActivity : BaseActivity(),
 
           hideProgressBar()
 
-          val jsonObject = JSONObject(response)
+          val businessResponseModel = GsonBuilder().create()
+              .fromJson(response, BusinessResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
+          if (businessResponseModel.status.equals("true", ignoreCase = true)) {
 
-            val jsonArray = jsonObject.getJSONArray("businesses")
-
-            for (i in 0 until jsonArray.length()) {
-
-              val `object` = jsonArray.getJSONObject(i)
-
-              val businessModel = BusinessModel()
-              businessModel.businessId = `object`.optString("id")
-              businessModel.businessName = `object`.optString("name")
-
-              businessArrayList!!.add(businessModel)
+            for (business in businessResponseModel.businesses!!) {
+              businessArrayList!!.add(business)
             }
 
             if (businessArrayList!!.size > 0) {
@@ -109,7 +104,7 @@ class BusinessSearchActivity : BaseActivity(),
             }
 
           } else {
-            showNoDataLayout("noData", jsonObject.optString("message"))
+            showNoDataLayout("noData", businessResponseModel.message!!)
           }
         }
       // </editor-fold>
@@ -117,6 +112,7 @@ class BusinessSearchActivity : BaseActivity(),
 
     } catch (e: Exception) {
       e.printStackTrace()
+      hideProgressBar()
     }
   }
 
@@ -144,7 +140,7 @@ class BusinessSearchActivity : BaseActivity(),
 
   override fun onBusinessClick(position: Int) {
     val intent = Intent(activity!!, BusinessDetailsActivity::class.java)
-    intent.putExtra("business_id", businessArrayList!![position].businessId)
+    intent.putExtra("business_id", businessArrayList!![position].id)
     startActivity(intent)
   }
 
@@ -157,6 +153,10 @@ class BusinessSearchActivity : BaseActivity(),
   private fun initUI() {
 
     btnSearch.setOnClickListener(this)
+
+    recyclerViewBusinessSearch.layoutManager =
+        LinearLayoutManager(this@BusinessSearchActivity, LinearLayoutManager.VERTICAL, false)
+    recyclerViewBusinessSearch.isNestedScrollingEnabled = false
 
     edtBusinessSearch.setOnEditorActionListener { _, actionId, event ->
       if (actionId == EditorInfo.IME_ACTION_SEARCH) {

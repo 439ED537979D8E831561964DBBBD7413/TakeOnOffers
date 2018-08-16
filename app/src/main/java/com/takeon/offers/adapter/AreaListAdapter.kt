@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.takeon.offers.R
-import com.takeon.offers.model.CityModel
+import com.takeon.offers.model.CityAreaResponse.AreaResponseData
 import kotlinx.android.synthetic.main.takeon_area_list_item.view.radioButtonArea
 import java.util.ArrayList
 
 class AreaListAdapter(
-  private val areaArrayList: ArrayList<CityModel>
+  private val areaArrayList: ArrayList<AreaResponseData>
 ) : RecyclerView.Adapter<AreaListAdapter.CityViewHolder>() {
 
   override fun onCreateViewHolder(
@@ -20,10 +20,6 @@ class AreaListAdapter(
     val v = LayoutInflater.from(viewGroup.context)
         .inflate(R.layout.takeon_area_list_item, viewGroup, false)
     return CityViewHolder(v)
-  }
-
-  fun updateData() {
-    notifyDataSetChanged()
   }
 
   override fun onBindViewHolder(
@@ -36,13 +32,13 @@ class AreaListAdapter(
   inner class CityViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(
       position: Int,
-      cityModel: CityModel
+      cityModel: AreaResponseData
     ) {
-      itemView.radioButtonArea!!.text = cityModel.areaName
+      itemView.radioButtonArea!!.text = cityModel.area
       itemView.radioButtonArea.isChecked = cityModel.areaSelected != "0"
 
-      itemView.tag = position
-      itemView.setOnClickListener {
+      itemView.radioButtonArea.tag = position
+      itemView.radioButtonArea.setOnClickListener {
         updateSelected(it.tag as Int)
       }
     }
@@ -50,24 +46,26 @@ class AreaListAdapter(
 
   private fun updateSelected(position: Int) {
 
-    val cityModel = areaArrayList[position]
+    for (i in 0 until areaArrayList.size) {
 
-    if (cityModel.areaSelected == "1") {
+      val cityModelTemp = AreaResponseData()
 
-      val cityModelTemp = CityModel()
-      cityModelTemp.areaId = cityModel.areaId
-      cityModelTemp.areaName = cityModel.areaName
-      cityModelTemp.areaSelected = "0"
+      if (i == position) {
 
-      areaArrayList[position] = cityModelTemp
-    } else {
+        cityModelTemp.id = areaArrayList[i].id
+        cityModelTemp.area = areaArrayList[i].area
+        cityModelTemp.areaSelected = "1"
 
-      val cityModelTemp = CityModel()
-      cityModelTemp.areaId = cityModel.areaId
-      cityModelTemp.areaName = cityModel.areaName
-      cityModelTemp.areaSelected = "1"
+        areaArrayList[position] = cityModelTemp
 
-      areaArrayList[position] = cityModelTemp
+      } else {
+
+        cityModelTemp.id = areaArrayList[i].id
+        cityModelTemp.area = areaArrayList[i].area
+        cityModelTemp.areaSelected = "0"
+
+        areaArrayList[i] = cityModelTemp
+      }
     }
 
     notifyDataSetChanged()

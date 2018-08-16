@@ -9,5 +9,4 @@
     android:contentDescription="@string/app_name"
     android:padding="@dimen/_5sdp"
     android:scaleType="fitCenter"
-    android:src="@drawable/dummy_logo"
     />

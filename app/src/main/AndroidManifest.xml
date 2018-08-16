@@ -40,22 +40,22 @@
         android:name=".ui.intro.SliderActivity"
         android:screenOrientation="portrait"/>
     <activity
-        android:name=".ui.loginregister.LoginActivity"
+        android:name="com.takeon.offers.ui.loginregister.LoginActivity"
         android:screenOrientation="portrait"/>
     <activity
         android:name=".ui.BaseActivity"
         android:screenOrientation="portrait"/>
     <activity
-        android:name=".ui.loginregister.RegisterActivity"
+        android:name="com.takeon.offers.ui.loginregister.RegisterActivity"
         android:screenOrientation="portrait"/>
     <activity
-        android:name=".ui.loginregister.OTPActivity"
+        android:name="com.takeon.offers.ui.loginregister.OTPActivity"
         android:screenOrientation="portrait"/>
     <activity
-        android:name=".ui.loginregister.ForgotPasswordActivity"
+        android:name="com.takeon.offers.ui.loginregister.ForgotPasswordActivity"
         android:screenOrientation="portrait"/>
     <activity
-        android:name=".ui.loginregister.ResetPasswordActivity"
+        android:name="com.takeon.offers.ui.loginregister.ResetPasswordActivity"
         android:screenOrientation="portrait"/>
 
     <!-- Dash Board -->
@@ -88,10 +88,13 @@
 
     <!-- Profile -->
     <activity
-        android:name=".ui.ChangePasswordActivity"
+        android:name="com.takeon.offers.ui.profile.ChangePasswordActivity"
         android:screenOrientation="portrait"/>
     <activity
-        android:name=".ui.AboutUsActivity"
+        android:name="com.takeon.offers.ui.profile.AboutUsActivity"
+        android:screenOrientation="portrait"/>
+    <activity
+        android:name="com.takeon.offers.ui.profile.CustomerCareActivity"
         android:screenOrientation="portrait"/>
 
     <!-- Firebase Notifications -->

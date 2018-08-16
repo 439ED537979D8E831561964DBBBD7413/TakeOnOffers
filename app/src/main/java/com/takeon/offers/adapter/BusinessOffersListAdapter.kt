@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.takeon.offers.R
-import com.takeon.offers.model.OffersModel
+import com.takeon.offers.model.BusinessOffers
 import kotlinx.android.synthetic.main.takeon_offers_list_item.view.daysView
 import kotlinx.android.synthetic.main.takeon_offers_list_item.view.txtFriday
 import kotlinx.android.synthetic.main.takeon_offers_list_item.view.txtMonday
@@ -23,7 +23,7 @@ import kotlinx.android.synthetic.main.takeon_offers_list_item.view.txtWednesday
 import java.util.ArrayList
 
 class BusinessOffersListAdapter(
-  private val offersArrayList: ArrayList<OffersModel>,
+  private val offersArrayList: ArrayList<BusinessOffers>,
   val listener: ClickListener,
   val isFrom: String
 ) : RecyclerView.Adapter<BusinessOffersListAdapter.OffersViewHolder>() {
@@ -52,7 +52,7 @@ class BusinessOffersListAdapter(
 
     fun bind(
       position: Int,
-      offersModel: OffersModel,
+      offersModel: BusinessOffers,
       isFrom: String
     ) {
 
@@ -62,12 +62,12 @@ class BusinessOffersListAdapter(
       }
 
       itemView.txtNumber!!.text = ((position + 1).toString())
-      itemView.txtOfferName!!.text = offersModel.offerName
+      itemView.txtOfferName!!.text = offersModel.title
       itemView.txtOfferAmount!!.text =
-          String.format("Offer Amount : %s Rs.", offersModel.offerAmount)
+          String.format("Offer Amount : %s Rs.", offersModel.amount)
 
       when {
-        offersModel.offerDescription == "" -> itemView.txtOfferDescription.visibility = View.GONE
+        offersModel.description == "" -> itemView.txtOfferDescription.visibility = View.GONE
         else -> {
           itemView.txtOfferDescription.visibility = View.VISIBLE
 
@@ -79,46 +79,68 @@ class BusinessOffersListAdapter(
           }
 
           itemView.txtOfferDescription.text =
-              String.format("Offer Description : %s ", offersModel.offerDescription)
+              String.format("Offer Description : %s ", offersModel.description)
         }
       }
 
-      when {
-        offersModel.offerDays.size == 0 -> itemView.daysView!!.visibility = View.GONE
-        else -> {
-          itemView.daysView!!.visibility = View.VISIBLE
+      if (isFrom == "business") {
+        val daysList = getDays(offersModel.eligible_days!!)
 
-          for (i in 0 until offersModel.offerDays.size) {
+        when {
+          daysList.size == 0 -> itemView.daysView!!.visibility = View.GONE
+          else -> {
+            itemView.daysView!!.visibility = View.VISIBLE
 
-            val day = offersModel.offerDays[i]
+            for (i in 0 until daysList.size) {
 
-            when (day) {
-              "1" -> {
-                itemView.txtMonday!!.visibility = View.VISIBLE
-              }
-              "2" -> {
-                itemView.txtTuesday!!.visibility = View.VISIBLE
-              }
-              "3" -> {
-                itemView.txtWednesday!!.visibility = View.VISIBLE
-              }
-              "4" -> {
-                itemView.txtThursday!!.visibility = View.VISIBLE
-              }
-              "5" -> {
-                itemView.txtFriday!!.visibility = View.VISIBLE
-              }
-              "6" -> {
-                itemView.txtSaturday!!.visibility = View.VISIBLE
-              }
-              "7" -> {
-                itemView.txtSunday!!.visibility = View.VISIBLE
+              val day = daysList[i]
+
+              when (day) {
+                "1" -> {
+                  itemView.txtMonday!!.visibility = View.VISIBLE
+                }
+                "2" -> {
+                  itemView.txtTuesday!!.visibility = View.VISIBLE
+                }
+                "3" -> {
+                  itemView.txtWednesday!!.visibility = View.VISIBLE
+                }
+                "4" -> {
+                  itemView.txtThursday!!.visibility = View.VISIBLE
+                }
+                "5" -> {
+                  itemView.txtFriday!!.visibility = View.VISIBLE
+                }
+                "6" -> {
+                  itemView.txtSaturday!!.visibility = View.VISIBLE
+                }
+                "7" -> {
+                  itemView.txtSunday!!.visibility = View.VISIBLE
+                }
               }
             }
           }
         }
+      } else {
+        itemView.daysView!!.visibility = View.GONE
       }
     }
+  }
+
+  private fun getDays(eligible_days: String): ArrayList<String> {
+
+    val days = ArrayList<String>()
+
+    val temp = eligible_days.split(",")
+
+    for (aTemp in temp) {
+      days.add(
+          aTemp.replace("[", "").replace("]", "")
+              .replace("\"", "").trim { it <= ' ' }
+      )
+    }
+
+    return days
   }
 
   override fun getItemCount(): Int {

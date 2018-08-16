@@ -22,13 +22,34 @@
       android:layout_width="match_parent"
       android:layout_height="@dimen/_36sdp"
       android:layout_margin="@dimen/_10sdp"
-      android:background="@drawable/edt_shadow_background"
+      android:background="@drawable/edt_background"
       android:fontFamily="@font/roboto_medium"
       android:gravity="center"
       android:hint="@string/str_city"
       android:padding="@dimen/_8sdp"
       android:textSize="@dimen/_12sdp"
       />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginTop="@dimen/_5sdp"
+      android:background="@color/monsoon"/>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/roboto_medium"
+      android:gravity="center|start"
+      android:hint="@string/str_select_area"
+      android:padding="@dimen/_8sdp"
+      android:textSize="@dimen/_12sdp"
+      />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="@color/monsoon"/>
 
   <android.support.v7.widget.RecyclerView
       android:id="@+id/recyclerViewArea"
@@ -46,7 +67,7 @@
       android:orientation="horizontal"
       >
     <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btnFilter"
+        android:id="@+id/btnSubmit"
         android:layout_width="0dp"
         android:layout_height="@dimen/_32sdp"
         android:layout_gravity="center"
@@ -54,7 +75,7 @@
         android:layout_weight="1"
         android:background="@drawable/btn_shadow_background"
         android:fontFamily="@font/roboto_black"
-        android:text="@string/str_filter"
+        android:text="@string/str_submit"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/_12sdp"

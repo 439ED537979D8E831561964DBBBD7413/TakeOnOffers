@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.iid.FirebaseInstanceId
 import com.takeon.offers.kprogresshud.KProgressHUD
+import com.takeon.offers.model.LoginRegisterResponse.LoginResultModel
 import com.takeon.offers.utils.VolleyNetWorkCall
-import org.json.JSONObject
 
 open class BaseActivity : AppCompatActivity() {
 
@@ -27,21 +27,21 @@ open class BaseActivity : AppCompatActivity() {
     getToken()
   }
 
-  fun setData(resultObject: JSONObject) {
+  fun setData(resultObject: LoginResultModel) {
 
     MyApplication.instance.preferenceUtility.login = true
     MyApplication.instance
-        .preferenceUtility.userId = resultObject.optString("user_id")
-    MyApplication.instance.preferenceUtility.firstName = resultObject.optString("firstname")
+        .preferenceUtility.userId = resultObject.user_id!!
+    MyApplication.instance.preferenceUtility.firstName = resultObject.firstname!!
     MyApplication.instance
-        .preferenceUtility.lastName = resultObject.optString("lastname")
-    MyApplication.instance.preferenceUtility.mobileNumber = resultObject.optString("mobile")
-    MyApplication.instance.preferenceUtility.email = resultObject.optString("email")
-    MyApplication.instance.preferenceUtility.photo = resultObject.optString("photo")
+        .preferenceUtility.lastName = resultObject.lastname!!
+    MyApplication.instance.preferenceUtility.mobileNumber = resultObject.mobile!!
+    MyApplication.instance.preferenceUtility.email = resultObject.email!!
+    MyApplication.instance.preferenceUtility.photo = resultObject.photo!!
     MyApplication.instance.preferenceUtility
-        .setString("city", resultObject.optString("city"))
+        .setString("city", resultObject.city!!)
     MyApplication.instance.preferenceUtility
-        .setString("city_id", resultObject.optString("city_id"))
+        .setString("city_id", resultObject.city_id!!)
   }
 
   private fun getToken() {

@@ -6,10 +6,12 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.android.volley.VolleyError
+import com.google.gson.GsonBuilder
 import com.takeon.offers.R
 import com.takeon.offers.adapter.BusinessOffersListAdapter
 import com.takeon.offers.adapter.BusinessOffersListAdapter.ClickListener
-import com.takeon.offers.model.OffersModel
+import com.takeon.offers.model.BusinessOffers
+import com.takeon.offers.model.BusinessOffersResponse
 import com.takeon.offers.ui.BaseActivity
 import com.takeon.offers.utils.CommonDataUtility
 import com.takeon.offers.utils.StaticDataUtility
@@ -30,7 +32,7 @@ class BusinessOffersActivity : BaseActivity(),
     View.OnClickListener, VolleyNetWorkCall.OnResponse, ClickListener {
 
   private var activity: Activity? = null
-  private var offersList: ArrayList<OffersModel>? = null
+  private var offersList: ArrayList<BusinessOffers>? = null
   private var businessId = ""
   private var isFrom = ""
 
@@ -74,44 +76,51 @@ class BusinessOffersActivity : BaseActivity(),
 
           hideProgressBar()
 
-          val jsonObject = JSONObject(response)
+          val businessOffersResponse = GsonBuilder().create()
+              .fromJson(response, BusinessOffersResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
+          if (businessOffersResponse.status.equals("true", ignoreCase = true)) {
 
             // <editor-fold Set business details>
-            val businessOffers = jsonObject.optJSONArray("business_offers")
 
-            if (businessOffers.length() > 0) {
-
-              for (i in 0 until businessOffers.length()) {
-
-                val offersObject = businessOffers.getJSONObject(i)
-
-                val offersModel = OffersModel()
-                offersModel.offerId = offersObject.optString("id")
-                offersModel.offerName = offersObject.optString("title")
-                offersModel.offerAmount = offersObject.optString("amount")
-                offersModel.offerDescription = offersObject.optString("description")
-
-                val days = ArrayList<String>()
-
-                if (offersObject.optString("eligible_days") != "") {
-
-                  val temp = offersObject.optString("eligible_days")
-                      .split(",")
-
-                  for (aTemp in temp) {
-                    days.add(
-                        aTemp.replace("[", "").replace("]", "")
-                            .replace("\"", "").trim { it <= ' ' }
-                    )
-                  }
-                }
-
-                offersModel.offerDays = days
-                offersList!!.add(offersModel)
+            if (businessOffersResponse.business_offers!!.size > 0) {
+              for (business_offers in businessOffersResponse.business_offers) {
+                offersList!!.add(business_offers)
               }
             }
+
+//            if (businessOffers.length() > 0) {
+//
+//              for (i in 0 until businessOffers.length()) {
+//
+//                val offersObject = businessOffers.getJSONObject(i)
+//
+//                val offersModel = BusinessOffers()
+//                offersModel.offerId = offersObject.optString("id")
+//                offersModel.offerName = offersObject.optString("title")
+//                offersModel.offerAmount = offersObject.optString("amount")
+//                offersModel.offerDescription = offersObject.optString("description")
+//                offersModel.isRedeem = offersObject.optString("is_redeem")
+//
+//                val days = ArrayList<String>()
+//
+//                if (offersObject.optString("eligible_days") != "") {
+//
+//                  val temp = offersObject.optString("eligible_days")
+//                      .split(",")
+//
+//                  for (aTemp in temp) {
+//                    days.add(
+//                        aTemp.replace("[", "").replace("]", "")
+//                            .replace("\"", "").trim { it <= ' ' }
+//                    )
+//                  }
+//                }
+//
+//                offersModel.offerDays = days
+//                offersList!!.add(offersModel)
+//              }
+//            }
 
             if (offersList!!.size == 0) {
               showNoDataLayout("noData", getString(R.string.str_no_business_offers))
@@ -123,7 +132,7 @@ class BusinessOffersActivity : BaseActivity(),
             // </editor-fold>
 
           } else {
-            showNoDataLayout("noData", jsonObject.optString("message"))
+            showNoDataLayout("noData", businessOffersResponse.message!!)
           }
         }
       // </editor-fold>
@@ -133,39 +142,45 @@ class BusinessOffersActivity : BaseActivity(),
 
           hideProgressBar()
 
-          val jsonObject = JSONObject(response)
+          val businessOffersResponse = GsonBuilder().create()
+              .fromJson(response, BusinessOffersResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
+          if (businessOffersResponse.status.equals("true", ignoreCase = true)) {
 
             // <editor-fold Set business details>
-            val redeemOffers = jsonObject.optJSONArray("offers")
 
-            if (redeemOffers.length() > 0) {
-
-              for (i in 0 until redeemOffers.length()) {
-
-                val offersObject = redeemOffers.getJSONObject(i)
-
-                val offersModel = OffersModel()
-                offersModel.offerId = offersObject.optString("id")
-                offersModel.offerName = offersObject.optString("title")
-                offersModel.offerAmount = offersObject.optString("amount")
-                offersModel.offerDescription = offersObject.optString("description")
-
-                offersList!!.add(offersModel)
+            if (businessOffersResponse.offers!!.size > 0) {
+              for (business_offers in businessOffersResponse.offers) {
+                offersList!!.add(business_offers)
               }
+            }
 
-              if (offersList!!.size == 0) {
-                showNoDataLayout("noData", getString(R.string.str_no_redeem_offers))
-              } else {
-                val offersListAdapter = BusinessOffersListAdapter(offersList!!, this, isFrom)
-                recyclerViewBusinessOffers.adapter = offersListAdapter
-              }
+//            if (redeemOffers.length() > 0) {
+//
+//              for (i in 0 until redeemOffers.length()) {
+//
+//                val offersObject = redeemOffers.getJSONObject(i)
+//
+//                val offersModel = BusinessOffers()
+//                offersModel.offerId = offersObject.optString("id")
+//                offersModel.offerName = offersObject.optString("title")
+//                offersModel.offerAmount = offersObject.optString("amount")
+//                offersModel.offerDescription = offersObject.optString("description")
+//
+//                offersList!!.add(offersModel)
+//              }
+//            }
+
+            if (offersList!!.size == 0) {
+              showNoDataLayout("noData", getString(R.string.str_no_redeem_offers))
+            } else {
+              val offersListAdapter = BusinessOffersListAdapter(offersList!!, this, isFrom)
+              recyclerViewBusinessOffers.adapter = offersListAdapter
             }
             // </editor-fold>
 
           } else {
-            showNoDataLayout("noData", jsonObject.optString("message"))
+            showNoDataLayout("noData", businessOffersResponse.message!!)
           }
         }
       // </editor-fold>
@@ -222,13 +237,16 @@ class BusinessOffersActivity : BaseActivity(),
 
     if (isFrom == "business") {
 
-      val intent = Intent(activity, BusinessOffersRedeemActivity::class.java)
-      val bundle = Bundle()
-      bundle.putSerializable("images", offersList)
-      bundle.putInt("position", position)
-      bundle.putString("business_id", businessId)
-      intent.putExtras(bundle)
-      startActivity(intent)
+      if (offersList!![position].is_redeem == "1") {
+        CommonDataUtility.showSnackBar(llRoot, "This offer already redeemed by you!!!")
+      } else {
+        val intent = Intent(activity, BusinessOffersRedeemActivity::class.java)
+        val bundle = Bundle()
+        bundle.putSerializable("images", offersList!![position])
+        bundle.putString("business_id", businessId)
+        intent.putExtras(bundle)
+        startActivity(intent)
+      }
     }
   }
 
@@ -266,7 +284,10 @@ class BusinessOffersActivity : BaseActivity(),
     val jsonObject = HashMap<String, String>()
     try {
       when (isFrom) {
-        "business" -> jsonObject["business_id"] = businessId
+        "business" -> {
+          jsonObject["business_id"] = businessId
+          jsonObject["user_id"] = getUserId
+        }
         "profile" -> jsonObject["user_id"] = getUserId
       }
     } catch (e: Exception) {

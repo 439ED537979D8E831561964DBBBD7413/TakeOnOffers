@@ -3,8 +3,10 @@ package com.takeon.offers.utils
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.location.LocationManager
 import android.net.ConnectivityManager
+import android.net.Uri
 import android.support.annotation.Nullable
 import android.support.design.widget.Snackbar
 import android.view.View
@@ -12,7 +14,8 @@ import android.view.inputmethod.InputMethodManager
 import com.google.android.gms.common.util.Strings
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.takeon.offers.model.CityModel
+import com.takeon.offers.model.CityAreaResponse
+import com.takeon.offers.model.CityAreaResponse.CityResponseData
 import com.takeon.offers.ui.MyApplication
 import java.util.ArrayList
 import java.util.regex.Matcher
@@ -95,7 +98,7 @@ object CommonDataUtility {
    *  store arrayList in shred preference
    */
   fun setArrayListPreference(
-    @Nullable arrayList: MutableList<CityModel>,
+    @Nullable arrayList: MutableList<CityResponseData>,
     key: String
   ) {
     MyApplication.instance.preferenceUtility.setString(key, Gson().toJson(arrayList))
@@ -107,13 +110,13 @@ object CommonDataUtility {
    */
   fun getArrayListPreference(
     key: String
-  ): ArrayList<CityModel> {
+  ): ArrayList<CityResponseData> {
 
-    val list: ArrayList<CityModel>
+    val list: ArrayList<CityResponseData>
 
     val json =
       MyApplication.instance.preferenceUtility.getString(key)
-    val type = object : TypeToken<ArrayList<CityModel>>() {
+    val type = object : TypeToken<ArrayList<CityResponseData>>() {
     }.type
 
     list = if (!Strings.isEmptyOrWhitespace(json)) {
@@ -123,6 +126,18 @@ object CommonDataUtility {
     }
 
     return list
+  }
+
+  /**
+   *  Used to open web site in mobile browser
+   */
+  fun openWebSite(
+    activity: Activity,
+    url: String
+  ) {
+    val i = Intent(Intent.ACTION_VIEW)
+    i.data = Uri.parse(url)
+    activity.startActivity(i)
   }
 
 }

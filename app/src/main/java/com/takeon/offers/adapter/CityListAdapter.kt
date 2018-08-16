@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.takeon.offers.R
-import com.takeon.offers.model.CityModel
+import com.takeon.offers.model.CityAreaResponse.CityResponseData
 import kotlinx.android.synthetic.main.takeon_city_list_item.view.txtCity
 import java.util.ArrayList
 
 class CityListAdapter(
-  private val cityArrayList: ArrayList<CityModel>,
+  private val cityArrayList: ArrayList<CityResponseData>,
   private val clickListener: CityClickListener?
 ) : RecyclerView.Adapter<CityListAdapter.CityViewHolder>() {
 
@@ -35,8 +35,8 @@ class CityListAdapter(
   }
 
   inner class CityViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    fun bind(cityModel: CityModel) {
-      itemView.txtCity!!.text = cityModel.cityName
+    fun bind(cityModel: CityResponseData) {
+      itemView.txtCity!!.text = cityModel.city
 
       itemView.setOnClickListener {
         clickListener?.onCityClick(adapterPosition)

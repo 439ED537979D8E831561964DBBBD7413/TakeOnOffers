@@ -8,14 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.takeon.offers.R
-import com.takeon.offers.model.ImageModel
+import com.takeon.offers.model.SingleBusinessResponse.BusinessImages
+import com.takeon.offers.utils.StaticDataUtility
 import com.takeon.offers.view.TouchImageView
 import java.util.ArrayList
 
 class FullScreenAdapter// constructor
 (
   private val _activity: Activity,
-  private val _imagePaths: ArrayList<ImageModel>
+  private val _imagePaths: ArrayList<BusinessImages>
 ) : PagerAdapter() {
   private val inflater: LayoutInflater = _activity
       .getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -45,7 +46,7 @@ class FullScreenAdapter// constructor
     imgDisplay = viewLayout.findViewById(R.id.imgDisplay)
 
     Glide.with(_activity)
-        .load(_imagePaths[position].pathName)
+        .load(StaticDataUtility.BUSINESS_PHOTO_URL + _imagePaths[position].photo)
         .into(imgDisplay)
 
     container.addView(viewLayout)

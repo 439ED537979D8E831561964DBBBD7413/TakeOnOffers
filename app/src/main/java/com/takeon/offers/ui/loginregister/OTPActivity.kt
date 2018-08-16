@@ -5,9 +5,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.android.volley.VolleyError
+import com.google.gson.GsonBuilder
 import com.takeon.offers.R
+import com.takeon.offers.model.LoginRegisterResponse
 import com.takeon.offers.ui.BaseActivity
 import com.takeon.offers.ui.MainActivity
+import com.takeon.offers.ui.MyApplication
 import com.takeon.offers.utils.CommonDataUtility
 import com.takeon.offers.utils.StaticDataUtility
 import com.takeon.offers.utils.VolleyNetWorkCall
@@ -82,51 +85,50 @@ class OTPActivity : BaseActivity(), View.OnClickListener, VolleyNetWorkCall.OnRe
 
         StaticDataUtility.API_RESEND_SIGN_UP_OTP -> {
 
-          val jsonObject = JSONObject(response)
+          val otpResponseModel = GsonBuilder().create()
+              .fromJson(response, LoginRegisterResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
-            strOTP = jsonObject.optString("otp")
+          if (otpResponseModel.status.equals("true", ignoreCase = true)) {
+            strOTP = otpResponseModel.otp!!
             println("Hardik otp --> $strOTP")
 
             CommonDataUtility.showSnackBar(llRoot, "OTP resend successfully!!!")
           } else {
-            CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+            CommonDataUtility.showSnackBar(llRoot, otpResponseModel.message)
           }
 
         }
 
         StaticDataUtility.API_CHECK_SIGN_UP_OTP -> {
 
-          val jsonObject = JSONObject(response)
+          val otpResponseModel = GsonBuilder().create()
+              .fromJson(response, LoginRegisterResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
+          if (otpResponseModel.status.equals("true", ignoreCase = true)) {
 
-            val resultObject = jsonObject.optJSONObject("result")
-
-            setData(resultObject)
+            setData(otpResponseModel.result!!)
             startActivity(Intent(activity, MainActivity::class.java))
             finish()
           } else {
-            CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+            CommonDataUtility.showSnackBar(llRoot, otpResponseModel.message)
           }
 
         }
 
         StaticDataUtility.API_CHECK_FORGET_OTP -> {
 
-          val jsonObject = JSONObject(response)
+          val otpResponseModel = GsonBuilder().create()
+              .fromJson(response, LoginRegisterResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
-
-            //JSONObject resultObject = jsonObject.optJSONObject("result");
+          if (otpResponseModel.status.equals("true", ignoreCase = true)) {
 
             val intent = Intent(activity, ResetPasswordActivity::class.java)
             intent.putExtra("isFrom", isFrom)
-            intent.putExtra("user_id", jsonObject.optString("user_id"))
+            intent.putExtra("user_id", otpResponseModel.user_id)
             startActivity(intent)
             finish()
           } else {
-            CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+            CommonDataUtility.showSnackBar(llRoot, otpResponseModel.message)
           }
 
         }
@@ -134,7 +136,7 @@ class OTPActivity : BaseActivity(), View.OnClickListener, VolleyNetWorkCall.OnRe
 
     } catch (e: Exception) {
       e.printStackTrace()
-      CommonDataUtility.showSnackBar(llRoot,getString(R.string.error_server))
+      CommonDataUtility.showSnackBar(llRoot, getString(R.string.error_server))
     }
 
   }
@@ -144,7 +146,7 @@ class OTPActivity : BaseActivity(), View.OnClickListener, VolleyNetWorkCall.OnRe
     url: String
   ) {
     hideProgressBar()
-    CommonDataUtility.showSnackBar(llRoot,getString(R.string.error_server))
+    CommonDataUtility.showSnackBar(llRoot, getString(R.string.error_server))
   }
 
   private fun getIntentData() {
@@ -197,6 +199,7 @@ class OTPActivity : BaseActivity(), View.OnClickListener, VolleyNetWorkCall.OnRe
     try {
       jsonObject["user_id"] = userId
       jsonObject["otp"] = strOTP
+      jsonObject["device_token"] = MyApplication.instance.preferenceUtility.token
     } catch (e: Exception) {
       e.printStackTrace()
     }

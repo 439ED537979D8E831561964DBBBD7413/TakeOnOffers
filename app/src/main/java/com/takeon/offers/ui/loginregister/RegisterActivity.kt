@@ -13,12 +13,14 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import com.android.volley.VolleyError
+import com.google.gson.GsonBuilder
 import com.takeon.offers.R
 import com.takeon.offers.adapter.CityListAdapter
 import com.takeon.offers.adapter.CityListAdapter.CityClickListener
-import com.takeon.offers.model.CityModel
+import com.takeon.offers.model.CityAreaResponse
+import com.takeon.offers.model.CityAreaResponse.CityResponseData
+import com.takeon.offers.model.LoginRegisterResponse
 import com.takeon.offers.ui.BaseActivity
-import com.takeon.offers.ui.MyApplication
 import com.takeon.offers.utils.CommonDataUtility
 import com.takeon.offers.utils.StaticDataUtility
 import com.takeon.offers.utils.VolleyNetWorkCall
@@ -51,7 +53,7 @@ class RegisterActivity : BaseActivity(), View.OnClickListener, VolleyNetWorkCall
   private var strBirthDate: String? = ""
   private var strGender: String? = ""
   private var strCity: String? = ""
-  private var cityArrayList: ArrayList<CityModel>? = null
+  private var cityArrayList: ArrayList<CityResponseData>? = null
   private var cityId = ""
 
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -128,24 +130,18 @@ class RegisterActivity : BaseActivity(), View.OnClickListener, VolleyNetWorkCall
 
         StaticDataUtility.API_GET_CITIES -> {
 
-          val citiesArray = response.optJSONArray("cities")
+          val cityAreaResponse = GsonBuilder().create()
+              .fromJson(response.toString(), CityAreaResponse::class.java)
 
-          if (response.optString("status").equals("true", ignoreCase = true)) {
+          if (cityAreaResponse.status.equals("true", ignoreCase = true)) {
 
-            for (i in 0 until citiesArray.length()) {
-
-              val cityJsonObject = citiesArray.optJSONObject(i)
-
-              val cityModel = CityModel()
-              cityModel.cityId = cityJsonObject.optString("id")
-              cityModel.cityName = cityJsonObject.optString("city")
-
-              cityArrayList!!.add(cityModel)
+            for (cities in cityAreaResponse.cities!!) {
+              cityArrayList!!.add(cities)
             }
 
             CommonDataUtility.setArrayListPreference(cityArrayList!!, "cityList")
           } else {
-            CommonDataUtility.showSnackBar(llRoot, response.optString("message"))
+            CommonDataUtility.showSnackBar(llRoot, cityAreaResponse.message!!)
           }
         }
       }
@@ -165,20 +161,19 @@ class RegisterActivity : BaseActivity(), View.OnClickListener, VolleyNetWorkCall
 
     try {
 
-      val jsonObject = JSONObject(response)
+      val loginResponseModel = GsonBuilder().create()
+          .fromJson(response, LoginRegisterResponse::class.java)
 
-      if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
-
-        //JSONObject resultObject = jsonObject.optJSONObject("result");
+      if (loginResponseModel.status.equals("true", ignoreCase = true)) {
 
         val intent = Intent(activity, OTPActivity::class.java)
         intent.putExtra("isFrom", "register")
-        intent.putExtra("user_id", jsonObject.optString("user_id"))
-        intent.putExtra("otp", jsonObject.optString("otp"))
+        intent.putExtra("user_id", loginResponseModel.user_id)
+        intent.putExtra("otp", loginResponseModel.otp)
         startActivity(intent)
         finish()
       } else {
-        CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+        CommonDataUtility.showSnackBar(llRoot, loginResponseModel.message)
       }
     } catch (e: Exception) {
       e.printStackTrace()
@@ -255,7 +250,6 @@ class RegisterActivity : BaseActivity(), View.OnClickListener, VolleyNetWorkCall
       jsonObject["birth_date"] = strBirthDate!!
       jsonObject["gender"] = strGender!!
       jsonObject["city"] = cityId
-      jsonObject["device_token"] = MyApplication.instance.preferenceUtility.token
     } catch (e: Exception) {
       e.printStackTrace()
     }
@@ -307,9 +301,8 @@ class RegisterActivity : BaseActivity(), View.OnClickListener, VolleyNetWorkCall
             override fun onCityClick(position: Int) {
               dialog.dismiss()
 
-              txtCity!!.text = cityArrayList!![position]
-                  .cityName
-              cityId = cityArrayList!![position].cityId
+              txtCity!!.text = cityArrayList!![position].city
+              cityId = cityArrayList!![position].id!!
             }
           })
 

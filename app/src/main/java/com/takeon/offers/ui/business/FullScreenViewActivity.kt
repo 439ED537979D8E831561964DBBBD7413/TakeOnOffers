@@ -6,7 +6,7 @@ import android.support.v4.view.ViewPager.OnPageChangeListener
 import android.support.v7.app.AppCompatActivity
 import com.takeon.offers.R
 import com.takeon.offers.adapter.FullScreenAdapter
-import com.takeon.offers.model.ImageModel
+import com.takeon.offers.model.SingleBusinessResponse.BusinessImages
 import kotlinx.android.synthetic.main.takeon_activity_full_screen.imgBack
 import kotlinx.android.synthetic.main.takeon_activity_full_screen.main_toolbar
 import kotlinx.android.synthetic.main.takeon_activity_full_screen.txtTotalImages
@@ -36,7 +36,7 @@ class FullScreenViewActivity : AppCompatActivity() {
     val bundle = intent.extras
 
     position = bundle.getInt("position", 0)
-    val productImages = bundle.getSerializable("images") as ArrayList<ImageModel>
+    val productImages = bundle.getSerializable("images") as ArrayList<BusinessImages>
 
     val fullScreenAdapter = FullScreenAdapter(activity!!, productImages)
     viewPager.adapter = fullScreenAdapter

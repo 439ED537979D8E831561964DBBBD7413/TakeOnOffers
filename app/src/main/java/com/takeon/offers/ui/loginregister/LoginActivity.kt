@@ -5,7 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.android.volley.VolleyError
+import com.google.gson.GsonBuilder
 import com.takeon.offers.R
+import com.takeon.offers.model.LoginRegisterResponse
 import com.takeon.offers.ui.BaseActivity
 import com.takeon.offers.ui.MainActivity
 import com.takeon.offers.ui.MyApplication
@@ -82,34 +84,33 @@ class LoginActivity : BaseActivity(), View.OnClickListener, VolleyNetWorkCall.On
 
     try {
 
-      val jsonObject = JSONObject(response)
+      val loginResponseModel = GsonBuilder().create()
+          .fromJson(response, LoginRegisterResponse::class.java)
 
-      if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
+      if (loginResponseModel.status.equals("true", ignoreCase = true)) {
 
         edtUserId!!.text.clear()
         edtPassword!!.text.clear()
 
-        when (jsonObject.optString("is_verified")) {
+        when (loginResponseModel.is_verified) {
           "0" -> {
             val intent = Intent(activity, OTPActivity::class.java)
             intent.putExtra("isFrom", "login")
-            intent.putExtra("user_id", jsonObject.optString("user_id"))
-            intent.putExtra("otp", jsonObject.optString("otp"))
+            intent.putExtra("user_id", loginResponseModel.user_id)
+            intent.putExtra("otp", loginResponseModel.otp)
             startActivity(intent)
 
           }
           "1" -> {
-            CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+            CommonDataUtility.showSnackBar(llRoot, loginResponseModel.message)
 
-            val resultObject = jsonObject.optJSONObject("result")
-
-            setData(resultObject)
+            setData(loginResponseModel.result!!)
             startActivity(Intent(activity, MainActivity::class.java))
             finish()
           }
         }
       } else {
-        CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+        CommonDataUtility.showSnackBar(llRoot, loginResponseModel.message)
       }
     } catch (e: Exception) {
       e.printStackTrace()

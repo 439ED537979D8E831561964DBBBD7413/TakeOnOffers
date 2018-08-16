@@ -5,14 +5,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.afollestad.materialdialogs.MaterialDialog
 import com.bumptech.glide.Glide
 import com.takeon.offers.R
 import com.takeon.offers.R.layout
-import com.takeon.offers.ui.AboutUsActivity
-import com.takeon.offers.ui.ChangePasswordActivity
 import com.takeon.offers.ui.MyApplication
 import com.takeon.offers.ui.business.BusinessOffersActivity
 import com.takeon.offers.ui.loginregister.LoginActivity
+import com.takeon.offers.ui.profile.AboutUsActivity
+import com.takeon.offers.ui.profile.ChangePasswordActivity
+import com.takeon.offers.ui.profile.CustomerCareActivity
 import com.takeon.offers.utils.CommonDataUtility
 import kotlinx.android.synthetic.main.takeon_fragment_profile.imgLogo
 import kotlinx.android.synthetic.main.takeon_fragment_profile.rlRoot
@@ -63,19 +65,15 @@ class ProfileFragment : BaseFragment(), View.OnClickListener {
         intent.putExtra("isFrom", "profile")
         startActivity(intent)
       }
-      R.id.txtTerms -> CommonDataUtility.showSnackBar(
-          rlRoot, getString(R.string.str_terms_condition)
-      )
+      R.id.txtTerms -> {
+        CommonDataUtility.openWebSite(activity, "http://purvik.me/takeongroup/terms_conditions")
+      }
       R.id.txtRateUs -> CommonDataUtility.showSnackBar(rlRoot, getString(R.string.str_rate_us))
-      R.id.txtCustomerCare -> CommonDataUtility.showSnackBar(
-          rlRoot, getString(R.string.str_customer_care)
-      )
-      R.id.txtPrivacy -> CommonDataUtility.showSnackBar(
-          rlRoot, getString(R.string.str_privacy_policy)
-      )
-      R.id.txtDisclaimer -> CommonDataUtility.showSnackBar(
-          rlRoot, getString(R.string.str_disclaimer)
-      )
+      R.id.txtCustomerCare -> startActivity(Intent(activity, CustomerCareActivity::class.java))
+      R.id.txtPrivacy -> {
+        CommonDataUtility.openWebSite(activity, "http://purvik.me/takeongroup/privacy_policy")
+      }
+      R.id.txtDisclaimer -> showDisclaimerDialog()
       R.id.txtLogOut -> {
 
         MyApplication.instance.preferenceUtility.clearData()
@@ -129,5 +127,21 @@ class ProfileFragment : BaseFragment(), View.OnClickListener {
     txtPrivacy!!.setOnClickListener(this)
     txtDisclaimer!!.setOnClickListener(this)
     txtLogOut!!.setOnClickListener(this)
+  }
+
+  private fun showDisclaimerDialog() {
+
+    val builder = MaterialDialog.Builder(activity)
+        .title(R.string.str_disclaimer)
+        .content(R.string.str_disclaimer_content)
+        .positiveText(R.string.btn_ok)
+        .onPositive { materialDialog, _ ->
+          materialDialog.dismiss()
+        }
+
+    val dialog = builder.build()
+    dialog.setCancelable(false)
+    dialog.setCanceledOnTouchOutside(false)
+    dialog.show()
   }
 }

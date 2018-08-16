@@ -84,7 +84,6 @@
             android:ellipsize="end"
             android:fontFamily="@font/roboto_medium"
             android:gravity="center"
-            android:lines="1"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/_10sdp"
             />

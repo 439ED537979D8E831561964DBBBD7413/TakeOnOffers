@@ -109,6 +109,7 @@
             >
 
           <ImageView
+              android:id="@+id/imgNotification"
               android:layout_width="@dimen/_24sdp"
               android:layout_height="match_parent"
               android:layout_marginEnd="@dimen/_6sdp"

@@ -5,7 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.android.volley.VolleyError
+import com.google.gson.GsonBuilder
 import com.takeon.offers.R
+import com.takeon.offers.model.LoginRegisterResponse
 import com.takeon.offers.ui.BaseActivity
 import com.takeon.offers.utils.CommonDataUtility
 import com.takeon.offers.utils.StaticDataUtility
@@ -70,25 +72,24 @@ class ForgotPasswordActivity : BaseActivity(), View.OnClickListener, VolleyNetWo
     try {
       if (url.equals(StaticDataUtility.API_FORGET_PASSWORD, ignoreCase = true)) {
 
-        val jsonObject = JSONObject(response)
+        val forgotPasswordResponseModel = GsonBuilder().create()
+            .fromJson(response, LoginRegisterResponse::class.java)
 
-        if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
-
-          //JSONObject resultObject = jsonObject.optJSONObject("result");
+        if (forgotPasswordResponseModel.status.equals("true", ignoreCase = true)) {
 
           val intent = Intent(activity, OTPActivity::class.java)
           intent.putExtra("isFrom", "forgot_password")
-          intent.putExtra("user_id", jsonObject.optString("user_id"))
-          intent.putExtra("otp", jsonObject.optString("otp"))
+          intent.putExtra("user_id", forgotPasswordResponseModel.user_id)
+          intent.putExtra("otp", forgotPasswordResponseModel.otp)
           startActivity(intent)
           finish()
         } else {
-          CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+          CommonDataUtility.showSnackBar(llRoot, forgotPasswordResponseModel.message)
         }
       }
     } catch (e: Exception) {
       e.printStackTrace()
-      CommonDataUtility.showSnackBar(llRoot,getString(R.string.error_server))
+      CommonDataUtility.showSnackBar(llRoot, getString(R.string.error_server))
     }
 
   }
@@ -98,7 +99,7 @@ class ForgotPasswordActivity : BaseActivity(), View.OnClickListener, VolleyNetWo
     url: String
   ) {
     hideProgressBar()
-    CommonDataUtility.showSnackBar(llRoot,getString(R.string.error_server))
+    CommonDataUtility.showSnackBar(llRoot, getString(R.string.error_server))
   }
 
   private fun initUI() {

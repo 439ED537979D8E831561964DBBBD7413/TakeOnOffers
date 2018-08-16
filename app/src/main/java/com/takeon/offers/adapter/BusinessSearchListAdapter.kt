@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.takeon.offers.R.layout
-import com.takeon.offers.model.BusinessModel
+import com.takeon.offers.model.SingleBusinessData
 import kotlinx.android.synthetic.main.takeon_business_search_list_item.view.txtBusinessName
 import java.util.ArrayList
 
 class BusinessSearchListAdapter(
-  private val businessArrayList: ArrayList<BusinessModel>,
+  private val businessArrayList: ArrayList<SingleBusinessData>,
   private val clickListener: ClickListener?
 ) : RecyclerView.Adapter<BusinessSearchListAdapter.BusinessViewHolder>() {
 
@@ -37,10 +37,10 @@ class BusinessSearchListAdapter(
   inner class BusinessViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(
       position: Int,
-      businessModel: BusinessModel
+      businessModel: SingleBusinessData
     ) {
 
-      itemView.txtBusinessName!!.text = businessModel.businessName
+      itemView.txtBusinessName!!.text = businessModel.name
 
       itemView.tag = position
       itemView.setOnClickListener { v ->

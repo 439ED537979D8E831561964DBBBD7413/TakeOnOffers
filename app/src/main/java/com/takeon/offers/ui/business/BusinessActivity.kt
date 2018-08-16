@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.location.Location
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -19,13 +20,18 @@ import android.widget.TextView
 import com.afollestad.materialdialogs.MaterialDialog
 import com.android.volley.VolleyError
 import com.bumptech.glide.Glide
+import com.google.gson.GsonBuilder
 import com.takeon.offers.R
 import com.takeon.offers.adapter.AreaListAdapter
 import com.takeon.offers.adapter.BusinessListAdapter
 import com.takeon.offers.adapter.CityListAdapter
 import com.takeon.offers.adapter.CityListAdapter.CityClickListener
-import com.takeon.offers.model.BusinessModel
-import com.takeon.offers.model.CityModel
+import com.takeon.offers.model.BusinessResponse
+import com.takeon.offers.model.CityAreaResponse
+import com.takeon.offers.model.CityAreaResponse.AreaResponseData
+import com.takeon.offers.model.CityAreaResponse.CityResponseData
+import com.takeon.offers.model.CommonApiResponse
+import com.takeon.offers.model.SingleBusinessData
 import com.takeon.offers.ui.BaseActivity
 import com.takeon.offers.ui.MyApplication
 import com.takeon.offers.utils.CommonDataUtility
@@ -53,21 +59,29 @@ class BusinessActivity : BaseActivity(),
     BusinessListAdapter.ClickListener,
     LocationService.LocationGet {
 
+  private val handler = Handler()
   private var activity: Activity? = null
-  private var businessArrayList: ArrayList<BusinessModel>? = null
-  private var cityArrayList: ArrayList<CityModel>? = null
-  private var areaArrayList: ArrayList<CityModel>? = null
+  private var businessArrayList: ArrayList<SingleBusinessData>? = null
+  private var cityArrayList: ArrayList<CityResponseData>? = null
+  private var areaArrayList: ArrayList<AreaResponseData>? = null
   private var listAdapter: BusinessListAdapter? = null
   private lateinit var areaListAdapter: AreaListAdapter
   private var locationService: LocationService? = null
+  private var recyclerViewArea: RecyclerView? = null
   private var currentLatitude = 0.0
   private var currentLongitude = 0.0
   private var categoryId = ""
   private var offset = 10
-  private var cityId = ""
+  //  private var cityId = ""
   private var areaName = ""
   private var distance = ""
+  private var isFrom = ""
   private var favoritePosition = -1
+  private var lastVisibleItem: Int = 0
+  private var totalItemCount: Int = 0
+  private val visibleThreshold = 2
+  private var isLoading = false
+  private var totalProduct = "0"
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -84,12 +98,7 @@ class BusinessActivity : BaseActivity(),
     when (v.id) {
 
       R.id.txtCity -> {
-
-        if (cityArrayList!!.size > 0) {
-          showCitiesDialog()
-        } else {
-          getCities()
-        }
+        getCities()
       }
 
       R.id.txtDistance -> {
@@ -104,7 +113,9 @@ class BusinessActivity : BaseActivity(),
           )
           distance == "" -> CommonDataUtility.showSnackBar(llRoot, "Please select distance")
           else -> {
-            getAllBusiness("filter")
+            offset = 0
+            isFrom = "filter"
+            getAllBusiness()
           }
         }
       }
@@ -124,26 +135,21 @@ class BusinessActivity : BaseActivity(),
 
       // <editor-fold API_GET_CITIES>
         StaticDataUtility.API_GET_CITIES -> {
-          val citiesArray = response.optJSONArray("cities")
 
-          if (response.optString("status").equals("true", ignoreCase = true)) {
+          val cityAreaResponse = GsonBuilder().create()
+              .fromJson(response.toString(), CityAreaResponse::class.java)
 
-            for (i in 0 until citiesArray.length()) {
+          if (cityAreaResponse.status.equals("true", ignoreCase = true)) {
 
-              val cityJsonObject = citiesArray.optJSONObject(i)
-
-              val cityModel = CityModel()
-              cityModel.cityId = cityJsonObject.optString("id")
-              cityModel.cityName = cityJsonObject.optString("city")
-
-              cityArrayList!!.add(cityModel)
+            for (cities in cityAreaResponse.cities!!) {
+              cityArrayList!!.add(cities)
             }
 
-            CommonDataUtility.setArrayListPreference(cityArrayList!!, "cityList")
-            showCitiesDialog()
+            showFilterDialog()
 
+            CommonDataUtility.setArrayListPreference(cityArrayList!!, "cityList")
           } else {
-            CommonDataUtility.showSnackBar(llRoot, response.optString("message"))
+            CommonDataUtility.showSnackBar(llRoot, cityAreaResponse.message!!)
           }
         }
       }
@@ -167,34 +173,39 @@ class BusinessActivity : BaseActivity(),
       // <editor-fold API_GET_BUSINESSES>
         StaticDataUtility.API_GET_BUSINESSES -> {
 
-          val jsonObject = JSONObject(response)
+          val businessResponseModel = GsonBuilder().create()
+              .fromJson(response, BusinessResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
+          if (businessResponseModel.status.equals("true", ignoreCase = true)) {
 
-            val jsonArray = jsonObject.getJSONArray("businesses")
+            totalProduct = businessResponseModel.total_businesses!!
 
-            for (i in 0 until jsonArray.length()) {
-
-              val businessesObject = jsonArray.getJSONObject(i)
-
-              val businessModel = BusinessModel()
-              businessModel.businessId = businessesObject.optString("id")
-              businessModel.businessName = businessesObject.optString("name")
-              businessModel.city = businessesObject.optString("city")
-              businessModel.categoryId = businessesObject.optString("category_id")
-              businessModel.categoryName = businessesObject.optString("category")
-              businessModel.subCategoryId = businessesObject.optString("sub_category_id")
-              businessModel.subCategoryName = businessesObject.optString("sub_categories")
-              businessModel.savingAmount = businessesObject.optString("total_saving_amount")
-              businessModel.totalRedeem = businessesObject.optString("total_reedem")
-              businessModel.photo = businessesObject.optString("photo")
-              businessModel.distance = businessesObject.optString("distance_in_km")
-              businessModel.isFavorite = businessesObject.optString("is_faviorite")
-              businessModel.totalOffers = businessesObject.optString("total_offers")
-              businessModel.cuisines = businessesObject.optString("cosiness")
-
-              businessArrayList!!.add(businessModel)
+            for (business in businessResponseModel.businesses!!) {
+              businessArrayList!!.add(business)
             }
+
+//            for (i in 0 until jsonArray.length()) {
+//
+//              val businessesObject = jsonArray.getJSONObject(i)
+//
+//              val businessModel = BusinessModel()
+//              businessModel.businessId = businessesObject.optString("id")
+//              businessModel.businessName = businessesObject.optString("name")
+//              businessModel.city = businessesObject.optString("city")
+//              businessModel.categoryId = businessesObject.optString("category_id")
+//              businessModel.categoryName = businessesObject.optString("category")
+//              businessModel.subCategoryId = businessesObject.optString("sub_category_id")
+//              businessModel.subCategoryName = businessesObject.optString("sub_categories")
+//              businessModel.savingAmount = businessesObject.optString("total_saving_amount")
+//              businessModel.totalRedeem = businessesObject.optString("total_reedem")
+//              businessModel.photo = businessesObject.optString("photo")
+//              businessModel.distance = businessesObject.optString("distance_in_km")
+//              businessModel.isFavorite = businessesObject.optString("is_faviorite")
+//              businessModel.totalOffers = businessesObject.optString("total_offers")
+//              businessModel.cuisines = businessesObject.optString("cosiness")
+//
+//              businessArrayList!!.add(businessModel)
+//            }
 
             if (businessArrayList!!.size > 0) {
 
@@ -209,7 +220,7 @@ class BusinessActivity : BaseActivity(),
 
             offset += 10
           } else {
-            showNoDataLayout("noData", jsonObject.optString("message"))
+            showNoDataLayout("noData", businessResponseModel.message!!)
           }
 
           hideProgressBar()
@@ -219,29 +230,35 @@ class BusinessActivity : BaseActivity(),
       // <editor-fold API_GET_AREA>
         StaticDataUtility.API_GET_AREA -> {
 
-          val jsonObject = JSONObject(response)
+          val cityAreaResponse = GsonBuilder().create()
+              .fromJson(response, CityAreaResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
+          if (cityAreaResponse.status.equals("true", ignoreCase = true)) {
 
-            val jsonArray = jsonObject.getJSONArray("areas")
-
-            for (i in 0 until jsonArray.length()) {
-
-              val areasObject = jsonArray.getJSONObject(i)
-
-              val cityModel = CityModel()
-              cityModel.areaId = areasObject.optString("id")
-              cityModel.areaName = areasObject.optString("area")
-              cityModel.areaSelected = "0"
-
-              areaArrayList!!.add(cityModel)
+            for (areas in cityAreaResponse.areas!!) {
+              areaArrayList!!.add(areas)
             }
 
-            areaListAdapter.updateData()
+//            val jsonArray = jsonObject.getJSONArray("areas")
+//
+//            for (i in 0 until jsonArray.length()) {
+//
+//              val areasObject = jsonArray.getJSONObject(i)
+//
+//              val cityModel = CityAreaResponse()
+//              cityModel.areaId = areasObject.optString("id")
+//              cityModel.areaName = areasObject.optString("area")
+//              cityModel.areaSelected = "0"
+//
+//              areaArrayList!!.add(cityModel)
+//            }
 
           } else {
-            CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+            CommonDataUtility.showSnackBar(llRoot, cityAreaResponse.message)
           }
+
+          areaListAdapter = AreaListAdapter(areaArrayList!!)
+          recyclerViewArea?.adapter = areaListAdapter
 
           hideProgressBar()
         }
@@ -250,12 +267,13 @@ class BusinessActivity : BaseActivity(),
       // <editor-fold API_ADD_TO_FAVORITE_BUSINESS>
         StaticDataUtility.API_ADD_TO_FAVORITE_BUSINESS -> {
 
-          val jsonObject = JSONObject(response)
+          val commonApiResponse = GsonBuilder().create()
+              .fromJson(response, CommonApiResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
+          if (commonApiResponse.status.equals("true", ignoreCase = true)) {
             setFavoriteData("1")
           } else {
-            CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+            CommonDataUtility.showSnackBar(llRoot, commonApiResponse.message)
           }
 
           hideProgressBar()
@@ -265,12 +283,13 @@ class BusinessActivity : BaseActivity(),
       // <editor-fold API_REMOVE_FROM_FAVORITE_BUSINESS>
         StaticDataUtility.API_REMOVE_FROM_FAVORITE_BUSINESS -> {
 
-          val jsonObject = JSONObject(response)
+          val commonApiResponse = GsonBuilder().create()
+              .fromJson(response, CommonApiResponse::class.java)
 
-          if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
+          if (commonApiResponse.status.equals("true", ignoreCase = true)) {
             setFavoriteData("0")
           } else {
-            CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+            CommonDataUtility.showSnackBar(llRoot, commonApiResponse.message)
           }
 
           hideProgressBar()
@@ -327,12 +346,13 @@ class BusinessActivity : BaseActivity(),
       currentLongitude = location.longitude
     }
 
-    getAllBusiness("all")
+    isFrom = "all"
+    getAllBusiness()
   }
 
   override fun onBusinessClick(position: Int) {
     val intent = Intent(activity!!, BusinessDetailsActivity::class.java)
-    intent.putExtra("business_id", businessArrayList!![position].businessId)
+    intent.putExtra("business_id", businessArrayList!![position].id)
     startActivity(intent)
   }
 
@@ -348,7 +368,7 @@ class BusinessActivity : BaseActivity(),
   private fun setFavoriteData(favorite: String) {
 
     val businessModel = businessArrayList!![favoritePosition]
-    businessModel.isFavorite = favorite
+    businessModel.is_faviorite = favorite
 
     businessArrayList!![favoritePosition] = businessModel
 
@@ -377,9 +397,6 @@ class BusinessActivity : BaseActivity(),
 
   private fun initUI() {
 
-    cityArrayList = ArrayList()
-    cityArrayList = CommonDataUtility.getArrayListPreference("cityList")
-
     Glide.with(activity!!)
         .load(R.drawable.app_banner)
         .into(imgLogo!!)
@@ -393,15 +410,15 @@ class BusinessActivity : BaseActivity(),
     ) {
       txtCity!!.text = MyApplication.instance.preferenceUtility
           .getString("city")
-    } else {
-      txtCity!!.text = String.format("%s", "Surat")
     }
 
     distance = "1.0"
     txtDistance!!.text = String.format("%s km", distance)
 
-    recyclerViewBusinessList!!.layoutManager =
-        LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+    val linearLayoutManager =
+      LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+
+    recyclerViewBusinessList!!.layoutManager = linearLayoutManager
     recyclerViewBusinessList!!.isNestedScrollingEnabled = false
 
     btnFilter!!.setOnClickListener(this)
@@ -411,14 +428,44 @@ class BusinessActivity : BaseActivity(),
     updateLocation()
 
     btnRetry.setOnClickListener {
+      resetData()
       updateLocation()
     }
+
+    recyclerViewBusinessList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+      override fun onScrolled(
+        recyclerView: RecyclerView?,
+        dx: Int,
+        dy: Int
+      ) {
+        super.onScrolled(recyclerView, dx, dy)
+
+        totalItemCount = linearLayoutManager.getItemCount()
+        lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition()
+
+        if (Integer.parseInt(totalProduct) > offset) {
+          if (!isLoading && totalItemCount <= lastVisibleItem + visibleThreshold) {
+            isLoading = true
+            getAllBusiness()
+          }
+        }
+      }
+    })
   }
 
-  private fun showCitiesDialog() {
+  private fun resetData() {
 
+    txtCity!!.text = MyApplication.instance.preferenceUtility
+        .getString("city")
+
+    areaName = ""
+
+    distance = "1.0"
+    txtDistance!!.text = String.format("%s km", distance)
+  }
+
+  private fun showFilterDialog() {
     areaArrayList = ArrayList()
-
     openFilterDialog()
   }
 
@@ -426,15 +473,13 @@ class BusinessActivity : BaseActivity(),
   private fun getCities() {
 
     cityArrayList = ArrayList()
-
     showProgressBar()
-
     netWorkCall.makeServiceCall(activity!!, StaticDataUtility.API_GET_CITIES, this)
   }
 
-  private fun getArea() {
+  private fun getArea(cityId: String) {
 
-    cityArrayList = ArrayList()
+    areaArrayList = ArrayList()
 
     val jsonObject = HashMap<String, String>()
     try {
@@ -448,7 +493,7 @@ class BusinessActivity : BaseActivity(),
     netWorkCall.makePostServiceCall(activity!!, StaticDataUtility.API_GET_AREA, this, jsonObject)
   }
 
-  private fun getAllBusiness(isFrom: String) {
+  private fun getAllBusiness() {
 
     businessArrayList = ArrayList()
 
@@ -464,7 +509,8 @@ class BusinessActivity : BaseActivity(),
       jsonObject["offset"] = offset.toString()
 
       if (isFrom == "filter") {
-
+        jsonObject["distance"] = distance
+        jsonObject["area"] = areaName
       }
 
     } catch (e: Exception) {
@@ -553,26 +599,29 @@ class BusinessActivity : BaseActivity(),
           .setBackgroundDrawableResource(R.drawable.roundcorner_transparent)
 
       val txtFilterCity = dialog.findViewById<TextView>(R.id.txtFilterCity)
-
-      val btnFilter = dialog.findViewById<Button>(R.id.btnFilter)
-      val btnCancel = dialog.findViewById<Button>(R.id.btnCancel)
+      txtFilterCity.text = MyApplication.instance.preferenceUtility
+          .getString("city")
 
       txtFilterCity.setOnClickListener { openCitiesDialog(txtFilterCity) }
 
-      val recyclerViewArea = dialog.findViewById<RecyclerView>(R.id.recyclerViewArea)
-      recyclerViewArea.layoutManager =
-          GridLayoutManager(activity, 2)
+      recyclerViewArea = dialog.findViewById(R.id.recyclerViewArea)
+      recyclerViewArea?.layoutManager = GridLayoutManager(activity, 2)
 
       areaListAdapter = AreaListAdapter(areaArrayList!!)
 
-      recyclerViewArea.adapter = areaListAdapter
+      recyclerViewArea?.adapter = areaListAdapter
       activity!!.onWindowFocusChanged(true)
 
-      btnFilter.setOnClickListener {
+      handler.postDelayed(getAreaRunnable, 300)
+
+      val btnSubmit = dialog.findViewById<Button>(R.id.btnSubmit)
+      val btnCancel = dialog.findViewById<Button>(R.id.btnCancel)
+
+      btnSubmit.setOnClickListener {
 
         for (i in 0 until areaArrayList!!.size) {
           if (areaArrayList!![i].areaSelected == "1") {
-            areaName = areaArrayList!![i].areaName
+            areaName = areaArrayList!![i].area!!
           }
         }
 
@@ -583,7 +632,7 @@ class BusinessActivity : BaseActivity(),
           areaName == "" -> CommonDataUtility.showSnackBar(llRoot, "Please select area name")
           else -> {
 
-            txtCity.text = StringBuilder().append(txtFilterCity.text)
+            txtCity.text = StringBuilder().append(txtFilterCity.text as String)
                 .append("\n")
                 .append("(")
                 .append(areaName)
@@ -593,9 +642,23 @@ class BusinessActivity : BaseActivity(),
         }
       }
 
-      btnCancel.setOnClickListener { dialog.dismiss() }
+      btnCancel.setOnClickListener {
+        dialog.dismiss()
+        resetData()
+      }
 
       dialog.show()
+    }
+  }
+
+  /* Runnable to start slider activity */
+  private var getAreaRunnable: Runnable = object : Runnable {
+    override fun run() {
+      handler.removeCallbacks(this)
+      getArea(
+          MyApplication.instance.preferenceUtility
+              .getString("city_id")
+      )
     }
   }
 
@@ -633,11 +696,8 @@ class BusinessActivity : BaseActivity(),
             override fun onCityClick(position: Int) {
               dialog.dismiss()
 
-              txtFilterCity.text = cityArrayList!![position]
-                  .cityName
-              cityId = cityArrayList!![position].cityId
-
-              getArea()
+              txtFilterCity.text = cityArrayList!![position].city
+              getArea(cityArrayList!![position].id!!)
             }
           })
 

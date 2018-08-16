@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.android.volley.VolleyError
+import com.google.gson.GsonBuilder
 import com.takeon.offers.R
+import com.takeon.offers.model.LoginRegisterResponse
 import com.takeon.offers.ui.BaseActivity
 import com.takeon.offers.utils.CommonDataUtility
 import com.takeon.offers.utils.StaticDataUtility
@@ -78,21 +80,21 @@ class ResetPasswordActivity : BaseActivity(), View.OnClickListener, VolleyNetWor
     try {
       if (url.equals(StaticDataUtility.API_RESET_PASSWORD, ignoreCase = true)) {
 
-        val jsonObject = JSONObject(response)
+        val resetPasswordResponseModel = GsonBuilder().create()
+            .fromJson(response, LoginRegisterResponse::class.java)
 
-        if (jsonObject.optString("status").equals("true", ignoreCase = true)) {
-          Toast.makeText(activity, jsonObject.optString("message"), Toast.LENGTH_SHORT)
+        if (resetPasswordResponseModel.status.equals("true", ignoreCase = true)) {
+          Toast.makeText(activity, resetPasswordResponseModel.message, Toast.LENGTH_SHORT)
               .show()
           finish()
         } else {
-          CommonDataUtility.showSnackBar(llRoot, jsonObject.optString("message"))
+          CommonDataUtility.showSnackBar(llRoot, resetPasswordResponseModel.message)
         }
       }
     } catch (e: Exception) {
       e.printStackTrace()
-      CommonDataUtility.showSnackBar(llRoot,getString(R.string.error_server))
+      CommonDataUtility.showSnackBar(llRoot, getString(R.string.error_server))
     }
-
   }
 
   override fun onFailCall(
@@ -100,7 +102,7 @@ class ResetPasswordActivity : BaseActivity(), View.OnClickListener, VolleyNetWor
     url: String
   ) {
     hideProgressBar()
-    CommonDataUtility.showSnackBar(llRoot,getString(R.string.error_server))
+    CommonDataUtility.showSnackBar(llRoot, getString(R.string.error_server))
   }
 
   private fun getIntentData() {

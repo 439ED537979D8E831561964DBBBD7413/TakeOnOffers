@@ -10,7 +10,7 @@ import com.takeon.offers.R
 import com.takeon.offers.R.drawable
 import com.takeon.offers.R.layout
 import com.takeon.offers.R.string
-import com.takeon.offers.model.BusinessModel
+import com.takeon.offers.model.SingleBusinessData
 import com.takeon.offers.utils.StaticDataUtility
 import kotlinx.android.synthetic.main.takeon_business_list_item.view.imgFavorite
 import kotlinx.android.synthetic.main.takeon_business_list_item.view.imgLogo
@@ -26,7 +26,7 @@ import java.util.ArrayList
 
 class BusinessListAdapter(
   private val activity: Activity,
-  private val businessArrayList: ArrayList<BusinessModel>,
+  private val businessArrayList: ArrayList<SingleBusinessData>,
   private val clickListener: ClickListener?
 ) : RecyclerView.Adapter<BusinessListAdapter.BusinessViewHolder>() {
 
@@ -63,16 +63,16 @@ class BusinessListAdapter(
   inner class BusinessViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(
       position: Int,
-      businessModel: BusinessModel,
+      businessModel: SingleBusinessData,
       activity: Activity
     ) {
 
-      itemView.txtBusinessName!!.text = businessModel.businessName
+      itemView.txtBusinessName!!.text = businessModel.name
 
-      when (businessModel.categoryId) {
+      when (businessModel.category_id) {
         "1" -> {
 
-          when (businessModel.subCategoryId) {
+          when (businessModel.sub_category_id) {
             "7,8", "7,8,9", "9" -> {
               itemView.imgVegNonVeg.visibility = View.VISIBLE
               itemView.imgVegNonVeg.setImageResource(R.drawable.ico_male_female_svg)
@@ -90,7 +90,7 @@ class BusinessListAdapter(
         }
         "2" -> {
 
-          when (businessModel.subCategoryId) {
+          when (businessModel.sub_category_id) {
             "1,2", "1,2,3", "3" -> {
               itemView.imgVegNonVeg.visibility = View.VISIBLE
               itemView.imgVegNonVeg.setImageResource(R.drawable.ico_veg_non_veg)
@@ -115,7 +115,7 @@ class BusinessListAdapter(
         itemView.txtArea!!.text = businessModel.city
       }
 
-      itemView.txtOffer!!.text = String.format("%s offers", businessModel.totalOffers)
+      itemView.txtOffer!!.text = String.format("%s offers", businessModel.total_offers)
 
       if (businessModel.cuisines.equals("", ignoreCase = true)) {
         itemView.txtCuisines!!.setText(string.str_cuisines_not_available)
@@ -123,7 +123,7 @@ class BusinessListAdapter(
         itemView.txtCuisines!!.text = businessModel.cuisines
       }
 
-      if (businessModel.isFavorite.equals("0", ignoreCase = true)) {
+      if (businessModel.is_faviorite.equals("0", ignoreCase = true)) {
         itemView.imgFavorite!!.setImageResource(drawable.ico_like_un_fill_svg)
       } else {
         itemView.imgFavorite!!.setImageResource(drawable.ico_like_fill_svg)
@@ -137,8 +137,8 @@ class BusinessListAdapter(
         itemView.txtDistance!!.text = String.format("%s km", "0")
       }
 
-      itemView.txtRedeem!!.text = String.format("%s redeemed", businessModel.totalRedeem)
-      itemView.txtSave!!.text = String.format("Save Rs. %s /-", businessModel.savingAmount)
+      itemView.txtRedeem!!.text = String.format("%s redeemed", businessModel.total_reedem)
+      itemView.txtSave!!.text = String.format("Save Rs. %s /-", businessModel.total_saving_amount)
 
       if (!businessModel.photo.equals("", ignoreCase = true) && !businessModel.photo
               .equals("null", ignoreCase = true)
@@ -161,8 +161,8 @@ class BusinessListAdapter(
       itemView.imgFavorite!!.setOnClickListener { v ->
         clickListener?.onFavoriteClick(
             v.tag as Int,
-            businessArrayList[v.tag as Int].businessId!!,
-            if (businessArrayList[v.tag as Int].isFavorite.equals("0", ignoreCase = true))
+            businessArrayList[v.tag as Int].id!!,
+            if (businessArrayList[v.tag as Int].is_faviorite.equals("0", ignoreCase = true))
               "add"
             else
               "remove"

@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.takeon.offers.R
-import com.takeon.offers.model.CategoryModel
+import com.takeon.offers.model.CategoryResponse.CategoryModel
 import com.takeon.offers.utils.StaticDataUtility
 //import kotlinx.android.synthetic.main.takeon_category_list_item.view.imgCategory
 //import kotlinx.android.synthetic.main.takeon_category_list_item.view.txtCategoryName
@@ -47,12 +47,12 @@ class CategoryListAdapter(
       categoryModel: CategoryModel,
       activity: Activity
     ) {
-      itemView.txtCategoryName!!.text = categoryModel.categoryName
+      itemView.txtCategoryName!!.text = categoryModel.category
 
-      if (!TextUtils.isEmpty(categoryModel.categoryImage)) {
+      if (!TextUtils.isEmpty(categoryModel.image)) {
 
         Glide.with(activity)
-            .load(StaticDataUtility.CATEGORY_PHOTO_URL + categoryModel.categoryImage)
+            .load(StaticDataUtility.CATEGORY_PHOTO_URL + categoryModel.image)
             .into(itemView.imgCategory!!)
       }
 

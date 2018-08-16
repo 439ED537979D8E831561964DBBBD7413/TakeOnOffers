@@ -109,15 +109,6 @@ class SliderActivity : BaseActivity(), View.OnClickListener, VolleyNetWorkCall.O
 
   private fun setSlider() {
 
-//    imageList.add("https://i.pinimg.com/originals/c6/a2/89/c6a289648d689ebf779f5c11b2699ab5.jpg")
-//    imageList.add("https://www.planwallpaper.com/static/images/Old_tracks_iPhone_6_Wallpapers.jpg")
-//    imageList.add(
-//        "http://papers.co/wallpaper/papers.co-aa99-wallpaper-europe-and-africa-worldmap-33-iphone6-wallpaper.jpg"
-//    )
-//    imageList.add(
-//        "https://images.designtrends.com/wp-content/uploads/2016/03/29071910/Very-nice-Fireworks-iPhone-6-Wallpaper.jpg"
-//    )
-
     val adapter = MyViewPagerAdapter(activity!!, imageList)
     view_pager!!.adapter = adapter
     indicator!!.setViewPager(view_pager)
