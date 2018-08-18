@@ -48,7 +48,6 @@ import kotlinx.android.synthetic.main.takeon_activity_business_details.view_page
 import org.json.JSONObject
 import java.util.ArrayList
 import java.util.HashMap
-import java.util.Locale
 
 class BusinessDetailsActivity : BaseActivity(),
     View.OnClickListener, VolleyNetWorkCall.OnResponse, MenuImageClickListener {
@@ -316,8 +315,13 @@ class BusinessDetailsActivity : BaseActivity(),
 
     cardBusinessLocation.setOnClickListener {
 
-      val uri = String.format(Locale.ENGLISH, "geo:%f,%f", currentLatitude, currentLongitude)
-      val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
+      val uriBegin = "geo:$currentLatitude,$currentLongitude"
+      val encodedQuery = Uri.encode(
+          currentLatitude.toString() + "," + currentLongitude + "(" +
+              txtBusinessName.text.toString().trim() + ")"
+      )
+      val intent =
+        Intent(android.content.Intent.ACTION_VIEW, Uri.parse("$uriBegin?q=$encodedQuery&z=15"))
       startActivity(intent)
 
     }

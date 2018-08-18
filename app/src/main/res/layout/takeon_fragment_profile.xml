@@ -120,7 +120,6 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_below="@+id/layoutProfile"
-      android:layout_marginBottom="@dimen/_5sdp"
       >
 
     <LinearLayout
@@ -156,21 +155,35 @@
           android:padding="@dimen/_12sdp"
           >
 
-        <TextView
-            android:id="@+id/txtAbout"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_32sdp"
-            android:drawableEnd="@drawable/ico_next_svg"
-            android:drawableLeft="@drawable/small_app_logo"
-            android:drawablePadding="@dimen/_10sdp"
-            android:drawableRight="@drawable/ico_next_svg"
-            android:drawableStart="@drawable/small_app_logo"
-            android:fontFamily="@font/roboto_medium"
-            android:gravity="center|start"
-            android:text="@string/str_about_us"
-            android:textColor="@color/colorBlack"
-            android:textSize="@dimen/_10sdp"
-            />
+            android:layout_height="wrap_content"
+            >
+
+          <ImageView
+              android:id="@+id/imgOffers"
+              android:layout_width="@dimen/_18sdp"
+              android:layout_height="@dimen/_18sdp"
+              android:layout_gravity="center"
+              android:contentDescription="@string/app_name"
+              android:src="@drawable/app_logo"
+              />
+
+          <TextView
+              android:id="@+id/txtAbout"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/_32sdp"
+              android:layout_marginLeft="@dimen/_10sdp"
+              android:layout_marginStart="@dimen/_10sdp"
+              android:drawableEnd="@drawable/ico_next_svg"
+              android:drawableRight="@drawable/ico_next_svg"
+              android:fontFamily="@font/roboto_medium"
+              android:gravity="center|start"
+              android:text="@string/str_about_us"
+              android:textColor="@color/colorBlack"
+              android:textSize="@dimen/_10sdp"
+              />
+        </TableRow>
 
         <View
             android:layout_width="match_parent"

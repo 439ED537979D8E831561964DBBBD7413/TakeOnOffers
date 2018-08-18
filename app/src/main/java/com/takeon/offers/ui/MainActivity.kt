@@ -30,7 +30,6 @@ open class MainActivity : BaseActivity(), View.OnClickListener {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.takeon_activity_main)
 
-
     activity = this@MainActivity
 
     initUI()

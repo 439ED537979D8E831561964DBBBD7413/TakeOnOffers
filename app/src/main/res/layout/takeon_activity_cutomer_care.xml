@@ -123,7 +123,7 @@
           android:fontFamily="@font/roboto_medium"
           android:gravity="center|start"
           android:padding="@dimen/_8sdp"
-          android:text="Support Number : +91 12345 67890"
+          android:text="@string/str_support_number"
           android:textColor="@color/oil"
           android:textSize="@dimen/_12sdp"
           />
@@ -140,7 +140,7 @@
           android:fontFamily="@font/roboto_medium"
           android:gravity="center|start"
           android:padding="@dimen/_8sdp"
-          android:text="Support Email : support@foodsome.com"
+          android:text="@string/str_support_email"
           android:textColor="@color/oil"
           android:textSize="@dimen/_12sdp"
           />

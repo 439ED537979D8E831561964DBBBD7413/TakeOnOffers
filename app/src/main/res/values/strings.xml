@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">TakeOn Offers</string>
+  <string name="app_name">Takeon Offers</string>
   <string name="str_skip">Skip</string>
 
   <string name="error_server">We are facing some problem. Please try again!!! </string>
@@ -110,5 +110,7 @@
   <string name="str_friday">F</string>
   <string name="str_saturday">Sa</string>
   <string name="str_days_on_offer_eligible">Days On Offer Eligible</string>
+  <string name="str_support_email">Support Email :  info@takeongroup.com</string>
+  <string name="str_support_number">Support Number : +91 77779 14000</string>
 
 </resources>

@@ -1,112 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SPLITTER_PROPORTION" value="0.50222963" />
-  </component>
-  <component name="AndroidGradleBuildConfiguration">
-    <option name="COMMAND_LINE_OPTIONS" value="--stacktrace" />
-  </component>
-  <component name="AndroidLayouts">
-    <shared>
-      <config>
-        <devices>
-          <device id="Nexus 5" />
-          <device id="Nexus 4" />
-          <device id="pixel_xl" />
-          <device id="pixel_2" />
-          <device id="Nexus 5X" />
-          <device id="Galaxy Nexus" />
-          <device id="Nexus 6" />
-          <device id="pixel" />
-        </devices>
-      </config>
-    </shared>
-  </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-  </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt" line="196" mnemonic="O" />
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt" line="87" mnemonic="I" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="50d826e9-b4e1-42fd-96b6-843bac5c7c76" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/BusinessOffersResponse.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CategoryResponse.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CityAreaResponse.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CommonApiResponse.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/LoginRegisterResponse.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/SingleBusinessData.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/SingleBusinessResponse.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/profile/ChangePasswordActivity.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/profile/CustomerCareActivity.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_cutomer_care.xml" />
+    <list default="true" id="b9b53471-85b5-4515-a2d7-d7487823428d" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-ldpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/xml/backup_descriptor.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Hardik_Dungrani.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_afollestad_material_dialogs_core_0_9_6_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_afollestad_material_dialogs_core_0_9_6_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customtabs_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customtabs_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_2_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_2_2_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_2_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_2_2_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_exposed_instrumentation_api_publish_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_exposed_instrumentation_api_publish_0_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_0_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_1_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_0_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_0_0.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_7_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_7_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_7_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_7_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_base_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_base_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_lite_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_lite_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_clearcut_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_clearcut_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_flags_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_flags_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_gass_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_gass_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_location_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_location_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_phenotype_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_phenotype_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_places_placereport_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_places_placereport_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_15_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_15_0_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_15_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_15_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_common_15_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_vision_common_15_0_2.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_intuit_sdp_sdp_android_1_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_intuit_sdp_sdp_android_1_0_5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__me_zhanghai_android_materialprogressbar_library_1_4_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__me_zhanghai_android_materialprogressbar_library_1_4_2.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/TakeOnOffers.iml" afterPath="$PROJECT_DIR$/TakeOnOffers MVP.iml" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/AreaListAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/AreaListAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessListAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessListAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessOffersListAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessOffersListAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessSearchListAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessSearchListAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/CategoryListAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/CategoryListAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/CityListAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/CityListAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/FullScreenAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/FullScreenAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/MenuImagesListAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/MenuImagesListAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/FavoriteFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/FavoriteFragment.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/HomeFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/HomeFragment.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/ProfileFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/ProfileFragment.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/RecentFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/RecentFragment.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/BusinessModel.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/BusinessResponse.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CategoryModel.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CityModel.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/ImageModel.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/OffersModel.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/BusinessOffers.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/AboutUsActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/profile/AboutUsActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/BaseActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/BaseActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/ChangePasswordActivity.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/MainActivity.kt" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessOffersActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessOffersActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessOffersRedeemActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessOffersRedeemActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessSearchActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessSearchActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/FullScreenViewActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/FullScreenViewActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/intro/SliderActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/intro/SliderActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/ForgotPasswordActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/ForgotPasswordActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/LoginActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/LoginActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/OTPActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/OTPActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/RegisterActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/RegisterActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/ResetPasswordActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/ResetPasswordActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/utils/CommonDataUtility.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/utils/CommonDataUtility.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/dummy_logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/top_background.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_about_us.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_about_us.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_business.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_business.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_business_details.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_business_details.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_change_password.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_change_password.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_scanner.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_scanner.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_splash.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_splash.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_business_search_list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_business_search_list_item.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_dialog_filter.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_dialog_filter.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_fragment_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_fragment_home.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_images_list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_images_list_item.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/app_logo.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/app_logo.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/small_app_logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_cutomer_care.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_cutomer_care.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_main.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/takeon_fragment_profile.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/takeon_fragment_profile.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change beforePath="$PROJECT_DIR$/barcode-reader/barcode-reader.iml" afterPath="$PROJECT_DIR$/barcode-reader/barcode-reader.iml" />
-      <change beforePath="$PROJECT_DIR$/barcode-reader/src/main/java/info/androidhive/barcode/camera/GraphicOverlay.java" afterPath="$PROJECT_DIR$/barcode-reader/src/main/java/info/androidhive/barcode/camera/GraphicOverlay.java" />
       <change beforePath="$PROJECT_DIR$/pinview/pinview.iml" afterPath="$PROJECT_DIR$/pinview/pinview.iml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,162 +106,19 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$/app">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="TakeOnOffers" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="TakeOnOffers" type="f1a62948:ProjectNode" />
-                <item name=":app" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="TakeOnOffers" type="f1a62948:ProjectNode" />
-                <item name=":app" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="TakeOnOffers" type="f1a62948:ProjectNode" />
-                <item name=":app" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="HomeFragment.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/HomeFragment.kt">
+    <leaf>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-231">
-              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BusinessDetailsActivity.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="296" column="24" lean-forward="false" selection-start-line="296" selection-start-column="24" selection-end-line="296" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FullScreenViewActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/FullScreenViewActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="layoutResourceFile_vertical" />
-        <option value="Class" />
-        <option value="valueResourceFile" />
-        <option value="Kotlin File" />
-        <option value="resourceFile" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>categoryArrayList</find>
-      <find>imageList!!</find>
-      <find>MaterialD</find>
-      <find>str_disclaimer</find>
-      <find>showCitiesDialog</find>
-      <find>openCitiesDialog</find>
-      <find>API_GET_AREA</find>
-      <find>support@</find>
-      <find>resetData()</find>
-      <find>txtCity!!</find>
-      <find>txtCity.t</find>
-      <find>imgSearch</find>
-      <find>add</find>
-      <find>::cla</find>
-      <find>menuImages</find>
-      <find>API_GET_CITIES</find>
-      <find>businessArrayList</find>
-      <find>Full</find>
-      <find>openFilterDialog</find>
-      <find>showFilterDialog</find>
-      <find>area</find>
-      <find>areaArrayList</find>
-      <find>API_ADD_TO_FAVORITE_BUSINESS</find>
-      <find>val jsonObject = JSONObject(response)</find>
-      <find>GsonBuilder().create()</find>
-      <find>API_CATEGORY_SLIDER</find>
-      <find>optString(&quot;st</find>
-      <find>imageList</find>
-      <find>as Arra</find>
-      <find>&quot;images&quot;</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>llRecent</replace>
-      <replace>txtRecent</replace>
-      <replace>recent</replace>
-      <replace>API_GET_RECENT_BUSINESSES</replace>
-      <replace>str_no_recent_business</replace>
-      <replace>QrCodeScannerActivity</replace>
-      <replace>home</replace>
-      <replace>0B6BFE</replace>
-      <replace>takeon_activity_business_search</replace>
-      <replace>API_BUSINESS_SEARCH</replace>
-      <replace>recyclerViewBusinessSearch</replace>
-      <replace>_12sdp</replace>
-      <replace>android:height=&quot;12dp&quot;</replace>
-      <replace>android:height=&quot;14dp&quot;</replace>
-      <replace>android:width=&quot;14dp&quot;</replace>
-      <replace>_11sdp</replace>
-      <replace>businessesObject</replace>
-      <replace>appSharedPrefs.edit()</replace>
-      <replace>apply</replace>
-      <replace>61E8D4</replace>
-      <replace>android:right=&quot;2dp&quot;</replace>
-      <replace>android:left=&quot;1dp&quot;</replace>
-      <replace>&lt;corners android:radius=&quot;@dimen/_10sdp&quot;/&gt;</replace>
-      <replace>2dp</replace>
-      <replace>android:background=&quot;@null&quot;</replace>
-      <replace>android:background=&quot;@drawable/main_shadow_background&quot;</replace>
-      <replace>android:background=&quot;@drawable/top_gradient_background&quot;</replace>
-      <replace>00c5ff</replace>
-      <replace>0075ff</replace>
-      <replace>System.out.println(&quot;</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>G:\Hardik\TakeOn\TakeOnOffers\app\src\main\res\layout</dir>
-    </dirStrings>
-  </component>
-  <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="G:\Hardik\TakeOn\TakeOn Docs\takeonoffers.jks" />
-    <option name="KEY_ALIAS" value="takeonoffers" />
-    <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -297,14 +139,14 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="TakeOnOffers" />
+              <option name="name" value="TakeOnOffers MVP" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="TakeOnOffers" />
+                <option name="name" value="TakeOnOffers MVP" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
@@ -330,7 +172,7 @@
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'TakeOnOffers'." />
+                <option name="description" value="Displays the sub-projects of root project 'TakeOnOffers MVP'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
@@ -431,7 +273,7 @@
                 <option name="name" value="compileDebugAndroidTestJavaWithJavac" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'TakeOnOffers'. [incubating]" />
+                <option name="description" value="Displays the components produced by root project 'TakeOnOffers MVP'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="components" />
               </ExternalTaskPojo>
@@ -732,12 +574,12 @@
                 <option name="name" value="generateDebugAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in root project 'TakeOnOffers'. [incubating]" />
+                <option name="description" value="Displays the dependent components of components in root project 'TakeOnOffers MVP'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependentComponents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'TakeOnOffers'." />
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'TakeOnOffers MVP'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
@@ -870,7 +712,7 @@
                 <option name="name" value="bundleRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'TakeOnOffers'. [incubating]" />
+                <option name="description" value="Displays the configuration model of root project 'TakeOnOffers MVP'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
@@ -883,7 +725,7 @@
                 <option name="name" value="bundleAppClassesDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'TakeOnOffers' (some of the displayed tasks may belong to subprojects)." />
+                <option name="description" value="Displays the tasks runnable from root project 'TakeOnOffers MVP' (some of the displayed tasks may belong to subprojects)." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
@@ -905,7 +747,7 @@
                 <option name="name" value="transformNativeLibsWithIntermediateJniLibsForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'TakeOnOffers'." />
+                <option name="description" value="Displays all dependencies declared in root project 'TakeOnOffers MVP'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
@@ -999,7 +841,7 @@
                 <option name="name" value="preparePUBLISHED_NATIVE_LIBSDebugForPublishing" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'TakeOnOffers'." />
+                <option name="description" value="Displays the insight into a specific dependency in root project 'TakeOnOffers MVP'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
@@ -1213,7 +1055,7 @@
                 <option name="name" value="processReleaseGoogleServices" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'TakeOnOffers'." />
+                <option name="description" value="Displays the properties of root project 'TakeOnOffers MVP'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
@@ -4160,7 +4002,7 @@
                   </entry>
                 </map>
               </option>
-              <option name="name" value="TakeOnOffers" />
+              <option name="name" value="TakeOnOffers MVP" />
               <option name="projectBuildClasspath">
                 <list>
                   <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.4-all/9br9xq1tocpiv8o6njlyu5op1/gradle-4.4/src/announce" />
@@ -4324,63 +4166,6 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/takeon_cutomer_care.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/utils/StaticDataUtility.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/intro/SplashActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/profile/AboutUsActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/profile/CustomerCareActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/ProfileFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_cutomer_care.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/profile/CustomerCareActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/takeon_dialog_filter.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/takeon_fragment_home.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/BaseActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/LoginResponseModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/ForgotPasswordActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/ResetPasswordActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CategoryModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CategoryResponseModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/CategoryListAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/LoginActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/OffersModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/BusinessOffers.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/BusinessResponse.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessListAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessSearchActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessSearchListAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/utils/CommonDataUtility.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/CityListAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/RegisterActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/AreaListAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/BusinessOffersResponse.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/MenuImagesListAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/FullScreenAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/SingleBusinessData.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/SingleBusinessResponse.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CityAreaResponse.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessOffersListAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/FavoriteFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/profile/ChangePasswordActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CommonApiResponse.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/OTPActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/RecentFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CategoryResponse.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/MyViewPagerAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/HomeFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/intro/SliderActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessOffersRedeemActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessOffersActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/FullScreenViewActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1382" />
@@ -4403,132 +4188,31 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="TakeOnOffers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TakeOnOffers" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="TakeOnOffers MVP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TakeOnOffers MVP" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="TakeOnOffers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TakeOnOffers" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="TakeOnOffers MVP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TakeOnOffers MVP" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="TakeOnOffers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TakeOnOffers" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TakeOnOffers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TakeOnOffers" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TakeOnOffers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TakeOnOffers" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TakeOnOffers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TakeOnOffers" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="offers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TakeOnOffers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TakeOnOffers" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="offers" type="462c0819:PsiDirectoryNode" />
-              <item name="adapter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TakeOnOffers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TakeOnOffers" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="offers" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="G:/Android/sdk" />
-    <property name="settings.editor.selected.configurable" value="gradle.compiler" />
-    <property name="device.picker.selection" value="ZY222Z7QVB" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TechOnAgent" />
-    <property name="android.project.structure.last.selected" value="app" />
-    <property name="android.project.structure.proportion" value="0.15" />
-    <property name="SearchEverywhereHistoryKey" value="slider&#9;null&#9;null&#10;fav&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/fragment/FavoriteFragment.kt&#10;area&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/adapter/AreaListAdapter.kt&#10;Home&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/fragment/HomeFragment.kt&#10;busine&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt&#10;logi&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/loginregister/LoginActivity.kt&#10;Logi&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/model/LoginRegisterResponse.kt&#10;register&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/loginregister/RegisterActivity.kt&#10;regi&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/model/LoginRegisterResponse.kt&#10;favor&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/fragment/FavoriteFragment.kt&#10;favo&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/fragment/FavoriteFragment.kt&#10;rese&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/loginregister/ResetPasswordActivity.kt&#10;forg&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/loginregister/ForgotPasswordActivity.kt&#10;regis&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/loginregister/RegisterActivity.kt&#10;login&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/loginregister/LoginActivity.kt&#10;reset&#9;null&#9;null&#10;prof&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/fragment/ProfileFragment.kt&#10;Spla&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/intro/SplashActivity.kt&#10;Login&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/loginregister/LoginActivity.kt&#10;Busines&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt&#10;sta&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/utils/StaticDataUtility.kt&#10;business&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/res/layout/takeon_activity_business_details.xml&#10;activity_about_us&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/res/layout/activity_about_us.xml&#10;abou&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/AboutUsActivity.kt&#10;takeon_fragment_profile&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/res/layout/takeon_fragment_profile.xml&#10;Comm&#9;null&#9;null&#10;profil&#9;null&#9;null&#10;for&#9;null&#9;null&#10;qr&#9;null&#9;null&#10;change&#9;null&#9;null&#10;dummy_logo&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/res/drawable/dummy_logo.png&#10;GraphicOverlay&#9;PSI&#9;JAVA://info.androidhive.barcode.camera.GraphicOverlay&#10;slide&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/intro/SliderActivity.kt&#10;otp&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/loginregister/OTPActivity.kt&#10;bus&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt&#10;busines&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt&#10;takeon_business_search_list_item&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/res/layout/takeon_business_search_list_item.xml&#10;sear&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/business/BusinessSearchActivity.kt&#10;busi&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/business/BusinessOffersActivity.kt&#10;dialog&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/res/layout/takeon_dialog_filter.xml&#10;offer&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/res/layout/takeon_activity_business_offers.xml&#10;takeon_category_list_item&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/res/layout/takeon_category_list_item.xml&#10;catego&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/adapter/CategoryListAdapter.kt&#10;takeon_business_list_item&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/res/layout/takeon_business_list_item.xml&#10;takeon_offers_list_item&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/res/layout/takeon_offers_list_item.xml&#10;Businessoff&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/business/BusinessOffersActivity.kt&#10;businesde&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt&#10;busin&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt&#10;hom&#9;FILE&#9;file://G:/Hardik/TakeOn/TakeOnOffers/app/src/main/java/com/takeon/offers/fragment/HomeFragment.kt&#10;vol&#9;null&#9;null" />
-    <property name="DEBUGGABLE_DEVICE" value="motorola-motog3-ZY222Z7QVB" />
-    <property name="DEBUGGABLE_PROCESS" value="com.takeon.offers" />
-    <property name="SHOW_ALL_PROCESSES" value="false" />
-    <property name="DEBUGGER_ID" value="Auto" />
-    <property name="android.profiler.active" value="true" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/androidTest/java/com" />
-    <property name="ExportApk.ApkPath" value="G:\Hardik\TakeOn\TakeOnOffers\app" />
-    <property name="ExportApk.Flavors" value="" />
-    <property name="ExportApk.BuildType" value="release" />
-    <property name="ExportApk.SignV1" value="true" />
-    <property name="ExportApk.SignV2" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\Hardik\TakeOn\TakeOnOffers\app\src\main\res\layout" />
-      <recent name="G:\Hardik\TakeOn\TakeOnOffers\app\src\main\res\drawable" />
-      <recent name="G:\Hardik\TakeOn\TakeOnOffers\app\src\main\java\com\takeon\offers" />
-      <recent name="G:\Hardik\TakeOn\TakeOnOffers\app\src\main" />
-      <recent name="G:\Hardik\TakeOn\TakeOnOffers\app\src\main\java\com\takeon\offers\view" />
-    </key>
-    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="com.takeon.offers.model" />
-      <recent name="com.takeon.offers.profile" />
-      <recent name="com.takeon.offers.adapter" />
-      <recent name="com.takeon.offers.ui.business" />
-      <recent name="com.takeon.offers.ui" />
-    </key>
-    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="com.takeon.offers.profile" />
-      <recent name="com.takeon.offers.ui.business" />
-      <recent name="com.takeon.offers.ui.loginregister" />
-      <recent name="com.takeon.offers.ui.intro" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.takeon.offers.ui.business" />
-      <recent name="com.takeon.offers.fragment" />
-      <recent name="com.takeonoffers.fragment" />
-      <recent name="com.takeonoffers.ui" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\Hardik\TakeOn\TakeOnOffers\app\src\main\java\com\takeon\offers\profile" />
-      <recent name="G:\Hardik\TakeOn\TakeOnOffers\app" />
-      <recent name="G:\Hardik\TakeOn\TakeOnOffers\app\src\main\res\drawable" />
-      <recent name="G:\Hardik\TakeOn\TakeOnOffers\app\src\main\res\values" />
-      <recent name="G:\Hardik\TakeOn\TakeOnOffers\app\src\main\res\anim" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -4542,7 +4226,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -4566,7 +4250,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -4625,24 +4309,6 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="TakeOnOffers:app [assembleDebug]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="assembleDebug" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -4692,131 +4358,59 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="TakeOnOffers" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="TakeOnOffers" />
-      <envs />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <envs />
-    </configuration>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Android App.app" />
-      <item index="1" class="java.lang.String" itemvalue="Gradle.TakeOnOffers:app [assembleDebug]" />
-    </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.TakeOnOffers:app [assembleDebug]" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
-    <configuration>C:\Users\Hardik Dungrani\AppData\Roaming\Subversion</configuration>
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="50d826e9-b4e1-42fd-96b6-843bac5c7c76" name="Default" comment="" />
-      <created>1533277651926</created>
+      <changelist id="b9b53471-85b5-4515-a2d7-d7487823428d" name="Default" comment="" />
+      <created>1534585593103</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1533277651926</updated>
+      <updated>1534585593103</updated>
     </task>
-    <task id="LOCAL-00001" summary="TakeOnOffers 14-08-2018&#10;- Initial commit">
-      <created>1534247377253</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1534247377253</updated>
-    </task>
-    <task id="LOCAL-00002" summary="TakeOnOffers 14-08-2018&#10;- Initial commit">
-      <created>1534257862580</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1534257862580</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42695355" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5021482" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.49785176" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24436091" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29671574" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40656853" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -4825,600 +4419,18 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="TakeOnOffers 14-08-2018&#10;- Initial commit" />
-    <MESSAGE value="TakeOnOffers 16-08-2018&#10;- Use Gson for parsing as Model class." />
-    <option name="LAST_COMMIT_MESSAGE" value="TakeOnOffers 16-08-2018&#10;- Use Gson for parsing as Model class." />
+    <MESSAGE value="Changes on 17-08-2018" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes on 17-08-2018" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessOffersRedeemActivity.kt</url>
-          <line>234</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/HomeFragment.kt</url>
-          <line>155</line>
-          <properties />
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt</url>
-          <line>442</line>
-          <properties />
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt</url>
-          <line>315</line>
-          <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt</url>
-          <line>301</line>
-          <properties />
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt</url>
-          <line>232</line>
-          <properties />
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/ResetPasswordActivity.kt</url>
-          <line>130</line>
-          <properties />
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/ResetPasswordActivity.kt</url>
-          <line>141</line>
-          <properties />
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt</url>
-          <line>187</line>
-          <properties />
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt</url>
-          <line>200</line>
-          <properties />
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt</url>
-          <line>214</line>
-          <properties />
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt</url>
-          <line>222</line>
-          <properties />
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/service/MyFirebaseMessagingService.java</url>
-          <line>126</line>
-          <properties />
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/service/MyFirebaseMessagingService.java</url>
-          <line>136</line>
-          <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/service/NotificationUtils.java</url>
-          <line>37</line>
-          <properties />
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/service/NotificationUtils.java</url>
-          <line>47</line>
-          <properties />
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/service/NotificationUtils.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/service/NotificationUtils.java</url>
-          <line>115</line>
-          <properties />
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="96" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>StaticDataUtility.BUSINESS_PHOTO_URL + logoArray[0].photo</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>businessResponseModel</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>businessResponseModel.businesses.name</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>businessResponseModel.businesses</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>imageList</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>remoteMessage.getNotification()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(position + 1).toString()</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>shopImagesArray.getJSONObject(0)
-                          .optString(&quot;photo&quot;)</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>shopImagesArray.getJSONObject(i)
-                          .optString(&quot;photo&quot;)</expression-string>
-        <language-id>kotlin</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/utils/StaticDataUtility.kt">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="63" lean-forward="false" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/intro/SplashActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/profile/AboutUsActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="96" column="71" lean-forward="false" selection-start-line="96" selection-start-column="71" selection-end-line="96" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_cutomer_care.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1407">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/takeon_dialog_filter.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="69" column="25" lean-forward="true" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/takeon_fragment_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="109" column="0" lean-forward="true" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/ProfileFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="71" column="68" lean-forward="false" selection-start-line="71" selection-start-column="68" selection-end-line="71" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/profile/CustomerCareActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#38#394#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/BaseActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="43" column="52" lean-forward="false" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/ForgotPasswordActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/ResetPasswordActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CategoryModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/BusinessModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/ImageModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessListAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="65" column="39" lean-forward="false" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessSearchListAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessSearchActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/LoginActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="89" column="64" lean-forward="false" selection-start-line="89" selection-start-column="64" selection-end-line="89" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/CityListAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="38" column="46" lean-forward="false" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/utils/CommonDataUtility.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="112" column="31" lean-forward="false" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/Android/sdk/sources/android-27/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="465" column="19" lean-forward="false" selection-start-line="465" selection-start-column="19" selection-end-line="465" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/MenuImagesListAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/CategoryListAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/FullScreenAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="48" column="52" lean-forward="false" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/RegisterActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="54" column="35" lean-forward="false" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/SingleBusinessData.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/takeon_activity_business_offers_redeem.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1260">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CityAreaResponse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/AreaListAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/BusinessOffersListAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/BusinessOffers.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/BusinessOffersResponse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/profile/ChangePasswordActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="95" column="74" lean-forward="false" selection-start-line="95" selection-start-column="74" selection-end-line="95" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/FavoriteFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="84" column="35" lean-forward="false" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/LoginRegisterResponse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CommonApiResponse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/loginregister/OTPActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="120" column="68" lean-forward="true" selection-start-line="120" selection-start-column="68" selection-end-line="120" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/RecentFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="134" column="64" lean-forward="true" selection-start-line="134" selection-start-column="64" selection-end-line="134" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/BusinessResponse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="183" column="28" lean-forward="false" selection-start-line="183" selection-start-column="28" selection-end-line="183" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/CategoryResponse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/adapter/MyViewPagerAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/intro/SliderActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/fragment/HomeFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessOffersRedeemActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="139" column="48" lean-forward="false" selection-start-line="139" selection-start-column="48" selection-end-line="139" selection-end-column="48" />
-          <folding>
-            <element signature="e#3992#4024#1" expanded="false" />
-            <element signature="e#4175#4207#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessOffersActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="244" column="64" lean-forward="false" selection-start-line="244" selection-start-column="64" selection-end-line="244" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/model/SingleBusinessResponse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/FullScreenViewActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/takeon/offers/ui/business/BusinessDetailsActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="296" column="24" lean-forward="false" selection-start-line="296" selection-start-column="24" selection-end-line="296" selection-end-column="24" />
+        <state relative-caret-position="210">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
